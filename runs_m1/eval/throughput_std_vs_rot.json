@@ -1,0 +1,61 @@
+{
+  "note": "paired, same session, prefetch=0, warm page cache; idle machine, no concurrent training",
+  "rot-int4": [
+    {
+      "tokens_read": 1048576,
+      "disk_bytes_read": 406849480,
+      "read_seconds": 6.269928874971811,
+      "disk_seconds": 0.15124445804394782,
+      "decode_seconds": 4.586054207989946,
+      "read_disk_MB_per_s": 2690.0124821881395,
+      "decode_MB_per_s": 88.71449432306665,
+      "pipeline_MB_per_s": 64.88901040393847,
+      "read_tokens_per_s": 167238.89870357013
+    },
+    {
+      "tokens_read": 1048576,
+      "disk_bytes_read": 406849480,
+      "read_seconds": 6.234162374981679,
+      "disk_seconds": 0.11083887593122199,
+      "decode_seconds": 4.583465709059965,
+      "read_disk_MB_per_s": 3670.6388131584736,
+      "decode_MB_per_s": 88.76459557574434,
+      "pipeline_MB_per_s": 65.26129021482147,
+      "read_tokens_per_s": 168198.3780544506
+    }
+  ],
+  "std-int4": [
+    {
+      "tokens_read": 1048576,
+      "disk_bytes_read": 406849480,
+      "read_seconds": 6.304320166993421,
+      "disk_seconds": 0.14820041600614786,
+      "decode_seconds": 4.615159875887912,
+      "read_disk_MB_per_s": 2745.265438277329,
+      "decode_MB_per_s": 88.15501324788366,
+      "pipeline_MB_per_s": 64.53502823826754,
+      "read_tokens_per_s": 166326.57800120485
+    },
+    {
+      "tokens_read": 1048576,
+      "disk_bytes_read": 406849480,
+      "read_seconds": 6.125866000016686,
+      "disk_seconds": 0.10393733298406005,
+      "decode_seconds": 4.6137622920796275,
+      "read_disk_MB_per_s": 3914.372904511557,
+      "decode_MB_per_s": 88.18171683843185,
+      "pipeline_MB_per_s": 66.41501462795495,
+      "read_tokens_per_s": 171171.8800243335
+    }
+  ],
+  "means": {
+    "rot-int4": {
+      "decode_MB_per_s": 88.73954494940548,
+      "read_tokens_per_s": 167718.63837901037
+    },
+    "std-int4": {
+      "decode_MB_per_s": 88.16836504315776,
+      "read_tokens_per_s": 168749.22901276918
+    }
+  }
+}

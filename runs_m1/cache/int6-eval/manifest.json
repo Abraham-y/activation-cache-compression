@@ -1,0 +1,42 @@
+{
+  "codec": "int6",
+  "codec_state": {
+    "bits": 6,
+    "outlier_k": 0,
+    "d": 768
+  },
+  "codec_state_file": null,
+  "codec_state_bytes": 0,
+  "d": 768,
+  "n_tokens": 1000125,
+  "source": "runs_m1/cache/master-eval",
+  "payload_bytes": 580072500,
+  "payload_bytes_per_token": 580.0,
+  "disk_bytes_per_token": 580.0019917510311,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 152043520,
+      "disk_bytes": 152044018
+    },
+    {
+      "file": "shard_00001.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 152043520,
+      "disk_bytes": 152044018
+    },
+    {
+      "file": "shard_00002.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 152043520,
+      "disk_bytes": 152044018
+    },
+    {
+      "file": "shard_00003.npz",
+      "n_tokens": 213693,
+      "payload_bytes": 123941940,
+      "disk_bytes": 123942438
+    }
+  ]
+}

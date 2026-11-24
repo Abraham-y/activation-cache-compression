@@ -1,0 +1,372 @@
+{
+  "m5": {
+    "rows": [
+      {
+        "codec": "fp32",
+        "decode": "cpu",
+        "tokens_per_s": 9647.391552791218,
+        "train_seconds": 849.1414446249837,
+        "read_disk_MB_per_s": 1168.450278691928,
+        "sha": "df2e38a7f4e59174e4d476f876c1c268fc11189f7fdf7bc44ea29ae03c9cc0ae",
+        "vs_fp32_cpu": 1.0
+      }
+    ],
+    "V": {
+      "fp32": true,
+      "fp16": null,
+      "std-int4": null
+    },
+    "complete": false,
+    "T1_all_within_10pct": null
+  },
+  "a100_volume": {
+    "rows": [
+      {
+        "codec": "fp32",
+        "decode": "cpu",
+        "n": 2,
+        "tokens_per_s": 75105.9386311062,
+        "tps_range": [
+          49773.170925539656,
+          100438.70633667275
+        ],
+        "read_disk_MB_per_s": 459.03409784319695,
+        "read_share": 0.9881090103290493,
+        "sha": "7b3ee7ae5c315efcb2d18eabf7606c26d80552ed8078202dccc275e8f3826e78",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "fp32",
+        "decode": "gpu",
+        "n": 2,
+        "tokens_per_s": 119476.84546407484,
+        "tps_range": [
+          117622.04070271888,
+          121331.6502254308
+        ],
+        "read_disk_MB_per_s": 760.5489444201879,
+        "read_share": 0.534271054599248,
+        "sha": "7b3ee7ae5c315efcb2d18eabf7606c26d80552ed8078202dccc275e8f3826e78",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "fp16",
+        "decode": "cpu",
+        "n": 2,
+        "tokens_per_s": 115115.15012148392,
+        "tps_range": [
+          112651.76745123124,
+          117578.53279173661
+        ],
+        "read_disk_MB_per_s": 649.7585219827668,
+        "read_share": 0.8424760126124617,
+        "sha": "7128464f473116fd7a9577d9f8414801b5c4278562951ce157100794d8367b4c",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "fp16",
+        "decode": "gpu",
+        "n": 2,
+        "tokens_per_s": 119652.84698921224,
+        "tps_range": [
+          119608.13118493707,
+          119697.56279348742
+        ],
+        "read_disk_MB_per_s": 636.0229693569652,
+        "read_share": 0.3273002541885955,
+        "sha": "7128464f473116fd7a9577d9f8414801b5c4278562951ce157100794d8367b4c",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "std-int4",
+        "decode": "cpu",
+        "n": 2,
+        "tokens_per_s": 50088.720661780026,
+        "tps_range": [
+          40881.331458692955,
+          59296.10986486709
+        ],
+        "read_disk_MB_per_s": 187.59014572945398,
+        "read_share": 0.9969514633311838,
+        "sha": "59c86d06a881d2431613061a956be9bf9e80e9d39647e0e2074af3024b737504",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "std-int4",
+        "decode": "cpu-nomatmul",
+        "n": 2,
+        "tokens_per_s": 90902.61294444275,
+        "tps_range": [
+          89409.63325607323,
+          92395.59263281227
+        ],
+        "read_disk_MB_per_s": 465.75911177387803,
+        "read_share": 0.9946953288116522,
+        "sha": "59c86d06a881d2431613061a956be9bf9e80e9d39647e0e2074af3024b737504",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "std-int4",
+        "decode": "gpu",
+        "n": 2,
+        "tokens_per_s": 123847.90812501509,
+        "tps_range": [
+          120293.41959247697,
+          127402.39665755321
+        ],
+        "read_disk_MB_per_s": 368.31342743343043,
+        "read_share": 0.20050614241384798,
+        "sha": "59c86d06a881d2431613061a956be9bf9e80e9d39647e0e2074af3024b737504",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100 80GB PCIe",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      }
+    ],
+    "V": {
+      "fp32": true,
+      "fp16": true,
+      "std-int4": true
+    },
+    "best_fp32": "gpu",
+    "best_std_int4": "gpu",
+    "ratio_best_std_int4_over_best_fp32": 1.0365850189964596,
+    "reading": "no material gain"
+  },
+  "a100_local": {
+    "rows": [
+      {
+        "codec": "fp32",
+        "decode": "cpu",
+        "n": 2,
+        "tokens_per_s": 116951.41297225523,
+        "tps_range": [
+          113916.22799784434,
+          119986.59794666614
+        ],
+        "read_disk_MB_per_s": 811.5392976460012,
+        "read_share": 0.8272269246941444,
+        "sha": "7b3ee7ae5c315efcb2d18eabf7606c26d80552ed8078202dccc275e8f3826e78",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "fp32",
+        "decode": "gpu",
+        "n": 2,
+        "tokens_per_s": 118523.73164475692,
+        "tps_range": [
+          117557.2180114829,
+          119490.24527803092
+        ],
+        "read_disk_MB_per_s": 788.3869297109181,
+        "read_share": 0.5061032359191819,
+        "sha": "7b3ee7ae5c315efcb2d18eabf7606c26d80552ed8078202dccc275e8f3826e78",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "fp16",
+        "decode": "cpu",
+        "n": 2,
+        "tokens_per_s": 114632.83088391446,
+        "tps_range": [
+          113377.01029912617,
+          115888.65146870275
+        ],
+        "read_disk_MB_per_s": 813.9797342576957,
+        "read_share": 0.8907373434693668,
+        "sha": "7128464f473116fd7a9577d9f8414801b5c4278562951ce157100794d8367b4c",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "fp16",
+        "decode": "gpu",
+        "n": 2,
+        "tokens_per_s": 121019.96781439794,
+        "tps_range": [
+          119574.20271154666,
+          122465.73291724923
+        ],
+        "read_disk_MB_per_s": 751.6362924418072,
+        "read_share": 0.28039182068411345,
+        "sha": "7128464f473116fd7a9577d9f8414801b5c4278562951ce157100794d8367b4c",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "std-int4",
+        "decode": "cpu",
+        "n": 2,
+        "tokens_per_s": 92942.78576958437,
+        "tps_range": [
+          82849.0898493038,
+          103036.48168986494
+        ],
+        "read_disk_MB_per_s": 727.7374373409785,
+        "read_share": 0.9946594047173292,
+        "sha": "59c86d06a881d2431613061a956be9bf9e80e9d39647e0e2074af3024b737504",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "std-int4",
+        "decode": "cpu-nomatmul",
+        "n": 2,
+        "tokens_per_s": 92596.5691401738,
+        "tps_range": [
+          91976.4454852856,
+          93216.692795062
+        ],
+        "read_disk_MB_per_s": 765.9453323611665,
+        "read_share": 0.9946127657762471,
+        "sha": "59c86d06a881d2431613061a956be9bf9e80e9d39647e0e2074af3024b737504",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      },
+      {
+        "codec": "std-int4",
+        "decode": "gpu",
+        "n": 2,
+        "tokens_per_s": 129117.3786603001,
+        "tps_range": [
+          128729.0387399956,
+          129505.7185806046
+        ],
+        "read_disk_MB_per_s": 748.4064315957128,
+        "read_share": 0.07903245963388733,
+        "sha": "59c86d06a881d2431613061a956be9bf9e80e9d39647e0e2074af3024b737504",
+        "sha_consistent_across_reps": true,
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "page_cache_dropped": [
+          false,
+          false
+        ]
+      }
+    ],
+    "V": {
+      "fp32": true,
+      "fp16": true,
+      "std-int4": true
+    },
+    "best_fp32": "gpu",
+    "best_std_int4": "gpu",
+    "ratio_best_std_int4_over_best_fp32": 1.0893799652486036,
+    "reading": "no material gain"
+  },
+  "derived": {
+    "volume": {
+      "paper_cpu_decoder_slowdown_vs_best_fp32": 2.3853043935945664,
+      "paper_cpu_decoder_slowdown_vs_fp32_cpu": 1.4994581142978851,
+      "fp32_bytes_per_s_needed_MB": 367.0328692656379,
+      "std_int4_bytes_per_s_needed_MB": 48.05298835250586,
+      "min_tokens_per_s_gpu_paths": 119476.84546407484,
+      "max_tokens_per_s_gpu_paths": 123847.90812501509,
+      "ratio_sxm4_only": 1.006834580585304
+    },
+    "local": {
+      "paper_cpu_decoder_slowdown_vs_best_fp32": 1.2752332595086033,
+      "paper_cpu_decoder_slowdown_vs_fp32_cpu": 1.2583161996261976,
+      "fp32_bytes_per_s_needed_MB": 364.10490361269325,
+      "std_int4_bytes_per_s_needed_MB": 50.097542920196446,
+      "min_tokens_per_s_gpu_paths": 118523.73164475692,
+      "max_tokens_per_s_gpu_paths": 129117.3786603001,
+      "ratio_sxm4_only": 1.0760983382301796
+    },
+    "volume_read_MB_per_s_range": [
+      59.935734041571806,
+      840.4367658035571
+    ],
+    "slowest_fp32_volume_run": {
+      "tokens_per_s": 49773.170925539656,
+      "decode": "cpu",
+      "read_MB_per_s": 269.4839985714243,
+      "fraction_of_best_fp32": 0.4102241322281738
+    },
+    "gpu_paths_k_tokens_per_s_range_all": [
+      118.52373164475692,
+      129.11737866030012
+    ],
+    "gpu_variants": [
+      "NVIDIA A100 80GB PCIe",
+      "NVIDIA A100-SXM4-80GB"
+    ],
+    "a100_runs": 28,
+    "a100_wall_hours_incl_copies": 3.0143271852201887,
+    "m5_3x": {
+      "fp32_b3x_s0": {
+        "train_hours": 2.5142021099305647,
+        "loader_busy": 0.09987237307550667
+      },
+      "fp16_b3x_s0": {
+        "train_hours": 2.7945887166435974,
+        "loader_busy": 0.22668803308823354
+      },
+      "rot-int8_b3x_s0": {
+        "train_hours": 2.883187256516119,
+        "loader_busy": 0.26604076568468976
+      },
+      "rot-int4_b3x_s0": {
+        "train_hours": 2.6260078545716694,
+        "loader_busy": 0.26009058652035927
+      }
+    }
+  }
+}

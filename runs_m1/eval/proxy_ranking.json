@@ -1,0 +1,107 @@
+{
+  "note": "Spearman rho between each cheap proxy and same-seed retrained survival. 'all' = every released condition at that site; 'plotted' = the five codecs in the figure. rel_l2 needs no SAE at all.",
+  "sites": {
+    "GPT-2 L6": {
+      "n_conditions": 15,
+      "codecs": [
+        "bf16",
+        "fp16",
+        "fwdbf16",
+        "int4-o16",
+        "int4",
+        "int6-o8",
+        "int6",
+        "int8-o8",
+        "int8",
+        "pca256",
+        "rot-int4",
+        "rot-int6",
+        "rot-int8",
+        "rp256",
+        "std-int4"
+      ],
+      "rho_frozen_r_all": 0.982142857142857,
+      "rho_frozen_r_plotted": 0.9999999999999999,
+      "rho_rel_l2_all": 0.9785714285714284,
+      "rho_rel_l2_plotted": 0.9999999999999999,
+      "rho_cos_all": 0.982142857142857,
+      "rho_cos_plotted": 0.9999999999999999
+    },
+    "Pythia L8": {
+      "n_conditions": 5,
+      "codecs": [
+        "fp16",
+        "int4",
+        "int8",
+        "rot-int4",
+        "rot-int8"
+      ],
+      "rho_frozen_r_all": 0.9999999999999999,
+      "rho_frozen_r_plotted": 0.9999999999999999,
+      "rho_rel_l2_all": 0.9999999999999999,
+      "rho_rel_l2_plotted": 0.9999999999999999,
+      "rho_cos_all": 0.9999999999999999,
+      "rho_cos_plotted": 0.9999999999999999
+    },
+    "Pythia L16": {
+      "n_conditions": 5,
+      "codecs": [
+        "fp16",
+        "int4",
+        "int8",
+        "rot-int4",
+        "rot-int8"
+      ],
+      "rho_frozen_r_all": 0.9999999999999999,
+      "rho_frozen_r_plotted": 0.9999999999999999,
+      "rho_rel_l2_all": 0.9999999999999999,
+      "rho_rel_l2_plotted": 0.9999999999999999,
+      "rho_cos_all": 0.9999999999999999,
+      "rho_cos_plotted": 0.9999999999999999
+    }
+  },
+  "family_change": [
+    {
+      "pair": "pca256 vs int4",
+      "rel_l2": [
+        0.37055015747642517,
+        0.4552576942367554
+      ],
+      "cos": [
+        0.9260203742790222,
+        0.9021369953613281
+      ],
+      "frozen_r": [
+        0.8098192604360711,
+        0.8400506447378278
+      ],
+      "retrained": [
+        0.07839506172839507,
+        0.15596707818930042
+      ],
+      "magnitude_orders_correctly": false,
+      "frozen_orders_correctly": true
+    },
+    {
+      "pair": "rp256 vs int4",
+      "rel_l2": [
+        0.5908362501907348,
+        0.4552576942367554
+      ],
+      "cos": [
+        0.8048675926971436,
+        0.9021369953613281
+      ],
+      "frozen_r": [
+        0.579578835384358,
+        0.8400506447378278
+      ],
+      "retrained": [
+        0.028395061728395062,
+        0.15596707818930042
+      ],
+      "magnitude_orders_correctly": true,
+      "frozen_orders_correctly": true
+    }
+  ]
+}

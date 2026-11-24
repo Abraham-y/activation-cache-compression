@@ -1,0 +1,16 @@
+{
+  "n_tokens": 20000087,
+  "d_model": 768,
+  "n_scalars": 15360066816,
+  "arms": {
+    "oneulp": {
+      "fraction": null,
+      "n_perturbed": 1
+    },
+    "sparseulp6": {
+      "fraction": 1e-06,
+      "n_perturbed": 15335
+    }
+  },
+  "note": "Counts of stored scalars altered by one ulp. The knee the paper brackets is in this quantity, not in magnitude."
+}

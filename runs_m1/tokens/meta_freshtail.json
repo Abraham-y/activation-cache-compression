@@ -1,0 +1,12 @@
+{
+  "dataset": "apollo-research/Skylion007-openwebtext-tokenizer-gpt2",
+  "data_file": "data/train-00000-of-00073.parquet",
+  "first_doc": 20509,
+  "docs_end": 97172,
+  "row_len": 127,
+  "n_rows": 618111,
+  "n_tokens": 78500097,
+  "shuffle_seed": 1,
+  "rows_skipped_as_repeats": 19,
+  "rows_equal_to_train_or_eval": 0
+}

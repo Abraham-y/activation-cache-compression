@@ -1,0 +1,171 @@
+{
+  "protocol": "stable = best match > 0.9 in both other fp32 seeds; fixed = top-774 by min cross-seed r",
+  "regimes": {
+    "replay": {
+      "per_seed": [
+        {
+          "seed": 0,
+          "n_alive": 4738,
+          "stable_frac": 0.24905023216547068,
+          "n_stable": 1180,
+          "std-int4_b3x": {
+            "all": 0.38623891937526383,
+            "stable": 0.8957627118644068,
+            "unstable": 0.21725688589094996,
+            "fixed774": 0.9496124031007752
+          },
+          "fp16_b3x": {
+            "all": 0.4917686787674124,
+            "stable": 0.9177966101694915,
+            "unstable": 0.350477796514896,
+            "fixed774": 0.9573643410852714
+          }
+        },
+        {
+          "seed": 1,
+          "n_alive": 4769,
+          "stable_frac": 0.2468022646257077,
+          "n_stable": 1177,
+          "std-int4_b3x": {
+            "all": 0.39379324806039,
+            "stable": 0.8802039082412915,
+            "unstable": 0.2344097995545657,
+            "fixed774": 0.9457364341085271
+          },
+          "fp16_b3x": {
+            "all": 0.481862025581883,
+            "stable": 0.91928632115548,
+            "unstable": 0.33853006681514475,
+            "fixed774": 0.962532299741602
+          }
+        },
+        {
+          "seed": 2,
+          "n_alive": 4724,
+          "stable_frac": 0.2544453852667231,
+          "n_stable": 1202,
+          "std-int4_b3x": {
+            "all": 0.38187976291278575,
+            "stable": 0.8585690515806988,
+            "unstable": 0.21919363997728564,
+            "fixed774": 0.9160206718346253
+          },
+          "fp16_b3x": {
+            "all": 0.4955546147332769,
+            "stable": 0.9226289517470881,
+            "unstable": 0.34980124929017603,
+            "fixed774": 0.9547803617571059
+          }
+        }
+      ],
+      "summary": {
+        "stable_frac_mean": 0.2500992940193005,
+        "std-int4_b3x_all_mean": 0.3873039767828132,
+        "std-int4_b3x_all_range": [
+          0.38187976291278575,
+          0.39379324806039
+        ],
+        "std-int4_b3x_stable_mean": 0.8781785572287991,
+        "std-int4_b3x_stable_range": [
+          0.8585690515806988,
+          0.8957627118644068
+        ],
+        "std-int4_b3x_unstable_mean": 0.22362010847426714,
+        "std-int4_b3x_unstable_range": [
+          0.21725688589094996,
+          0.2344097995545657
+        ],
+        "std-int4_b3x_fixed774_mean": 0.9371231696813093,
+        "std-int4_b3x_fixed774_range": [
+          0.9160206718346253,
+          0.9496124031007752
+        ],
+        "fp16_b3x_all_mean": 0.4897284396941908,
+        "fp16_b3x_all_range": [
+          0.481862025581883,
+          0.4955546147332769
+        ],
+        "fp16_b3x_stable_mean": 0.91990396102402,
+        "fp16_b3x_stable_range": [
+          0.9177966101694915,
+          0.9226289517470881
+        ],
+        "fp16_b3x_unstable_mean": 0.3462697042067389,
+        "fp16_b3x_unstable_range": [
+          0.33853006681514475,
+          0.350477796514896
+        ],
+        "fp16_b3x_fixed774_mean": 0.9582256675279931,
+        "fp16_b3x_fixed774_range": [
+          0.9547803617571059,
+          0.962532299741602
+        ]
+      }
+    },
+    "fresh": {
+      "per_seed": [
+        {
+          "seed": 0,
+          "n_alive": 4736,
+          "stable_frac": 0.24873310810810811,
+          "n_stable": 1178,
+          "std-int4_freshb3x": {
+            "all": 0.3893581081081081,
+            "stable": 0.8947368421052632,
+            "unstable": 0.22203485103991005,
+            "fixed774": 0.9457364341085271
+          }
+        },
+        {
+          "seed": 1,
+          "n_alive": 4794,
+          "stable_frac": 0.24697538589904047,
+          "n_stable": 1184,
+          "std-int4_freshb3x": {
+            "all": 0.3911138923654568,
+            "stable": 0.879222972972973,
+            "unstable": 0.23102493074792244,
+            "fixed774": 0.9418604651162791
+          }
+        },
+        {
+          "seed": 2,
+          "n_alive": 4691,
+          "stable_frac": 0.2553826476231081,
+          "n_stable": 1198,
+          "std-int4_freshb3x": {
+            "all": 0.38435301641441055,
+            "stable": 0.8656093489148581,
+            "unstable": 0.21929573432579444,
+            "fixed774": 0.9211886304909561
+          }
+        }
+      ],
+      "summary": {
+        "stable_frac_mean": 0.2503637138767522,
+        "std-int4_freshb3x_all_mean": 0.38827500562932515,
+        "std-int4_freshb3x_all_range": [
+          0.38435301641441055,
+          0.3911138923654568
+        ],
+        "std-int4_freshb3x_stable_mean": 0.879856387997698,
+        "std-int4_freshb3x_stable_range": [
+          0.8656093489148581,
+          0.8947368421052632
+        ],
+        "std-int4_freshb3x_unstable_mean": 0.22411850537120895,
+        "std-int4_freshb3x_unstable_range": [
+          0.21929573432579444,
+          0.23102493074792244
+        ],
+        "std-int4_freshb3x_fixed774_mean": 0.9362618432385874,
+        "std-int4_freshb3x_fixed774_range": [
+          0.9211886304909561,
+          0.9457364341085271
+        ]
+      }
+    }
+  },
+  "std_int4_stable_fresh_minus_replay": 0.0016778307688989358,
+  "reading": "agree within 2 pp"
+}

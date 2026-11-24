@@ -1,0 +1,479 @@
+{
+  "codec": "rot-int8",
+  "codec_state": {
+    "bits": 8,
+    "d": 768
+  },
+  "codec_state_file": "codec_state.npz",
+  "codec_state_bytes": 2365440,
+  "d": 768,
+  "n_tokens": 20000087,
+  "source": "runs_m1/cache/master-train",
+  "payload_bytes": 15440067164,
+  "payload_bytes_per_token": 772.0,
+  "disk_bytes_per_token": 772.0019172916598,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00001.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00002.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00003.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00004.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00005.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00006.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00007.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00008.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00009.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00010.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00011.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00012.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00013.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00014.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00015.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00016.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00017.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00018.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00019.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00020.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00021.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00022.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00023.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00024.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00025.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00026.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00027.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00028.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00029.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00030.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00031.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00032.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00033.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00034.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00035.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00036.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00037.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00038.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00039.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00040.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00041.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00042.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00043.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00044.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00045.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00046.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00047.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00048.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00049.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00050.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00051.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00052.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00053.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00054.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00055.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00056.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00057.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00058.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00059.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00060.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00061.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00062.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00063.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00064.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00065.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00066.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00067.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00068.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00069.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00070.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00071.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00072.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00073.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00074.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00075.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 202375168,
+      "disk_bytes": 202375666
+    },
+    {
+      "file": "shard_00076.npz",
+      "n_tokens": 77143,
+      "payload_bytes": 59554396,
+      "disk_bytes": 59554894
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "definition": "stable = Hungarian matched_cos>0.7 in both fp32 seed pairs (weight-space, independent of activation matching)",
+  "stable_frac_of_all": 0.19303385416666666,
+  "rows": {
+    "fp16_s0": {
+      "survived_stable": 0.8067104303428154,
+      "survived_unstable": 0.527371739753511
+    },
+    "rot-int8_s0": {
+      "survived_stable": 0.7644055433989788,
+      "survived_unstable": 0.44941243909429635
+    },
+    "rot-int4_s0": {
+      "survived_stable": 0.6294675419401896,
+      "survived_unstable": 0.2771567784465463
+    },
+    "int4_s0": {
+      "survived_stable": 0.26914660831509846,
+      "survived_unstable": 0.1114932645457151
+    }
+  }
+}

@@ -1,0 +1,2279 @@
+{
+  "codec": "fp32",
+  "codec_state": {
+    "dtype": "fp32",
+    "d": 768
+  },
+  "codec_state_file": null,
+  "codec_state_bytes": 0,
+  "d": 768,
+  "n_tokens": 98500184,
+  "source": "runs_m1/cache/master-train + runs_m1/cache/master-freshtail-train",
+  "payload_bytes": 302592565248,
+  "payload_bytes_per_token": 3072.0,
+  "disk_bytes_per_token": 3072.0009798154288,
+  "shards": [
+    {
+      "file": "../master-train/shard_00000.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00001.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00002.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00003.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00004.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00005.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00006.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00007.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00008.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00009.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00010.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00011.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00012.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00013.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00014.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00015.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00016.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00017.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00018.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00019.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00020.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00021.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00022.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00023.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00024.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00025.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00026.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00027.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00028.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00029.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00030.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00031.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00032.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00033.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00034.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00035.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00036.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00037.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00038.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00039.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00040.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00041.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00042.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00043.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00044.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00045.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00046.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00047.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00048.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00049.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00050.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00051.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00052.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00053.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00054.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00055.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00056.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00057.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00058.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00059.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00060.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00061.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00062.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00063.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00064.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00065.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00066.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00067.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00068.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00069.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00070.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00071.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00072.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00073.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00074.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00075.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-train/shard_00076.npz",
+      "n_tokens": 77143,
+      "payload_bytes": 236983296,
+      "disk_bytes": 236983552
+    },
+    {
+      "file": "../master-freshtail-train/shard_00000.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00001.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00002.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00003.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00004.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00005.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00006.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00007.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00008.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00009.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00010.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00011.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00012.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00013.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00014.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00015.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00016.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00017.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00018.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00019.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00020.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00021.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00022.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00023.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00024.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00025.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00026.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00027.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00028.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00029.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00030.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00031.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00032.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00033.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00034.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00035.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00036.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00037.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00038.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00039.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00040.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00041.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00042.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00043.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00044.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00045.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00046.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00047.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00048.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00049.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00050.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00051.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00052.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00053.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00054.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00055.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00056.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00057.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00058.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00059.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00060.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00061.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00062.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00063.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00064.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00065.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00066.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00067.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00068.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00069.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00070.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00071.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00072.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00073.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00074.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00075.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00076.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00077.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00078.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00079.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00080.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00081.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00082.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00083.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00084.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00085.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00086.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00087.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00088.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00089.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00090.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00091.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00092.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00093.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00094.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00095.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00096.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00097.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00098.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00099.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00100.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00101.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00102.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00103.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00104.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00105.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00106.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00107.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00108.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00109.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00110.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00111.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00112.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00113.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00114.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00115.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00116.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00117.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00118.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00119.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00120.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00121.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00122.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00123.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00124.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00125.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00126.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00127.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00128.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00129.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00130.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00131.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00132.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00133.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00134.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00135.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00136.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00137.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00138.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00139.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00140.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00141.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00142.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00143.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00144.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00145.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00146.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00147.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00148.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00149.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00150.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00151.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00152.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00153.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00154.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00155.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00156.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00157.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00158.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00159.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00160.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00161.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00162.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00163.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00164.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00165.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00166.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00167.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00168.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00169.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00170.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00171.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00172.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00173.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00174.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00175.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00176.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00177.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00178.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00179.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00180.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00181.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00182.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00183.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00184.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00185.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00186.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00187.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00188.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00189.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00190.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00191.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00192.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00193.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00194.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00195.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00196.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00197.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00198.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00199.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00200.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00201.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00202.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00203.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00204.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00205.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00206.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00207.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00208.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00209.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00210.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00211.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00212.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00213.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00214.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00215.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00216.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00217.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00218.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00219.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00220.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00221.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00222.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00223.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00224.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00225.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00226.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00227.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00228.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00229.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00230.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00231.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00232.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00233.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00234.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00235.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00236.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00237.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00238.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00239.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00240.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00241.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00242.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00243.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00244.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00245.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00246.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00247.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00248.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00249.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00250.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00251.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00252.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00253.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00254.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00255.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00256.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00257.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00258.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00259.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00260.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00261.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00262.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00263.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00264.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00265.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00266.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00267.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00268.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00269.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00270.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00271.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00272.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00273.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00274.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00275.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00276.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00277.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00278.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00279.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00280.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00281.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00282.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00283.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00284.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00285.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00286.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00287.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00288.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00289.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00290.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00291.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00292.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00293.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00294.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00295.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00296.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00297.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00298.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "../master-freshtail-train/shard_00299.npz",
+      "n_tokens": 119041,
+      "payload_bytes": 365693952,
+      "disk_bytes": 365694208
+    }
+  ]
+}

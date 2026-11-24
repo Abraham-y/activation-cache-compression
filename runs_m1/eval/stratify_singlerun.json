@@ -1,0 +1,77 @@
+{
+  "n_eval_tokens": 200000,
+  "threshold": 0.9,
+  "n_target": 774,
+  "note": "Strata built from single-run fp32 feature statistics (no run-to-run comparison anywhere in the selector). Floor is the s0-vs-s1 seed pair evaluated on the same population. Sizes matched to the seed-defined set.",
+  "arms": [
+    {
+      "arm": "seed-defined (for reference)",
+      "n": 774,
+      "floor": 1.0,
+      "codecs": {
+        "fp16": {
+          "survived": 0.9573643410852714,
+          "ratio_to_floor": 0.9573643410852714
+        },
+        "rot-int8": {
+          "survived": 0.9418604651162791,
+          "ratio_to_floor": 0.9418604651162791
+        },
+        "rot-int4": {
+          "survived": 0.8875968992248062,
+          "ratio_to_floor": 0.8875968992248062
+        },
+        "int4": {
+          "survived": 0.5891472868217055,
+          "ratio_to_floor": 0.5891472868217055
+        }
+      }
+    },
+    {
+      "arm": "top mean activation",
+      "n": 774,
+      "floor": 0.5129198966408268,
+      "codecs": {
+        "fp16": {
+          "survived": 0.8010335917312662,
+          "ratio_to_floor": 1.5617128463476073
+        },
+        "rot-int8": {
+          "survived": 0.7635658914728682,
+          "ratio_to_floor": 1.4886649874055418
+        },
+        "rot-int4": {
+          "survived": 0.6382428940568475,
+          "ratio_to_floor": 1.2443324937027709
+        },
+        "int4": {
+          "survived": 0.35400516795865633,
+          "ratio_to_floor": 0.6901763224181361
+        }
+      }
+    },
+    {
+      "arm": "top peak activation",
+      "n": 774,
+      "floor": 0.42118863049095606,
+      "codecs": {
+        "fp16": {
+          "survived": 0.8527131782945736,
+          "ratio_to_floor": 2.0245398773006134
+        },
+        "rot-int8": {
+          "survived": 0.8113695090439277,
+          "ratio_to_floor": 1.9263803680981597
+        },
+        "rot-int4": {
+          "survived": 0.6498708010335917,
+          "ratio_to_floor": 1.5429447852760736
+        },
+        "int4": {
+          "survived": 0.437984496124031,
+          "ratio_to_floor": 1.039877300613497
+        }
+      }
+    }
+  ]
+}

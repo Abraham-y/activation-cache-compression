@@ -1,0 +1,20 @@
+{
+  "fp32": {
+    "runs": [
+      8711,
+      8708,
+      8680
+    ],
+    "median": 8708.251250538313
+  },
+  "bf16": {
+    "runs": [
+      19243,
+      19234,
+      19239
+    ],
+    "median": 19239.407160047696
+  },
+  "speedup_bf16_over_fp32": 2.209330737771075,
+  "note": "GPT-2 small, MPS, batch_rows=64, layer 6; fp32 and bf16 interleaved in one session to control for thermal drift; forward only, no store write"
+}

@@ -1,0 +1,14 @@
+{
+  "dataset": "apollo-research/Skylion007-openwebtext-tokenizer-gpt2",
+  "tokenizer": "gpt2",
+  "pretokenized": true,
+  "ctx": 128,
+  "row_len": 127,
+  "prepend_eot": true,
+  "seed": 0,
+  "n_docs_consumed": 20509,
+  "n_rows_train": 157481,
+  "n_rows_eval": 7875,
+  "n_train_tokens": 20000087,
+  "n_eval_tokens": 1000125
+}

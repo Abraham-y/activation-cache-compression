@@ -1,0 +1,46 @@
+{
+  "method": "stable set = top-N features by min cross-seed matched correlation, N fixed across tiers so the population cannot drift with budget",
+  "n_fixed": 774,
+  "binomial_se_pp": 1.0783277320343843,
+  "tiers": {
+    "1x": {
+      "token_visits_M": 33,
+      "stability_threshold_at_N": 0.9001054410114868,
+      "n_alive": 4860,
+      "overlap_with_1x_set": 774,
+      "fp16": 0.9573643410852714,
+      "fp16_count": 741,
+      "rot-int8": 0.9418604651162791,
+      "rot-int8_count": 729,
+      "rot-int4": 0.8875968992248062,
+      "rot-int4_count": 687,
+      "gap_fp16_minus_rotint4_pp": 6.976744186046513
+    },
+    "3x": {
+      "token_visits_M": 98,
+      "stability_threshold_at_N": 0.9359550233647452,
+      "n_alive": 4738,
+      "overlap_with_1x_set": 512,
+      "fp16": 0.9573643410852714,
+      "fp16_count": 741,
+      "rot-int8": 0.9470284237726099,
+      "rot-int8_count": 733,
+      "rot-int4": 0.9354005167958657,
+      "rot-int4_count": 724,
+      "gap_fp16_minus_rotint4_pp": 2.1963824289405687
+    },
+    "10x": {
+      "token_visits_M": 328,
+      "stability_threshold_at_N": 0.9540687289604759,
+      "n_alive": 4637,
+      "overlap_with_1x_set": 429,
+      "fp16": 0.9573643410852714,
+      "fp16_count": 741,
+      "rot-int8": 0.962532299741602,
+      "rot-int8_count": 745,
+      "rot-int4": 0.9418604651162791,
+      "rot-int4_count": 729,
+      "gap_fp16_minus_rotint4_pp": 1.5503875968992276
+    }
+  }
+}

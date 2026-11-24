@@ -1,0 +1,621 @@
+\begin{table}[htbp]
+\caption{Full GPT-2 codec panel. $\pm$ rows are three-seed means ($\pm$ half the range), bare cells seed 0, so fp16 reads $59.3 \pm 1.1$ here and $60.6$ (seed 0) in the text. survived: best match above $r = 0.9$ against fp32 at the same seed; FVU: fraction of variance unexplained; mean $r$: the retrained SAE's best-match correlation, averaged over alive features (not the frozen reading); stable: survival among the $774$ features reproduced in both other fp32 seeds; Hung.\ cos: mean matched encoder and decoder cosine over all latents, dead ones included; frozen: the thresholded reading through the frozen fp32 SAE. FVU is flat across every viable codec ($0.1355$ to $0.1361$) while seed-0 agreement falls from $60.6$ to $37.6\%$. The floor row's FVU is the fp32 reference's own, and its Hungarian cosine averages the two seed-0 pairs.}
+\label{tab:m1full}
+\centering\footnotesize
+\begin{tabular}{lrrrrrrr}
+\toprule
+codec & B/tok & survived \% & FVU & mean $r$ & stable \% & Hung.\ cos & frozen \% \\
+\midrule
+fp16 & 1536 & $59.3 \pm 1.1$ & 0.1355 & 0.866 & 95.7 & 0.817 & 100.0 \\
+bf16 storage & 1536 & 55.6 & 0.1355 & 0.853 & 93.3 & 0.799 & 100.0 \\
+rot-int8 & 772 & $52.7 \pm 1.1$ & 0.1356 & 0.845 & 94.2 & 0.786 & 100.0 \\
+int8 & 772 & 46.6 & 0.1356 & 0.821 & 91.5 & 0.751 & 100.0 \\
+int8-o8 & 780 & 50.8 & 0.1355 & 0.837 & 93.7 & 0.773 & 100.0 \\
+rot-int6 & 580 & $45.9 \pm 0.7$ & 0.1355 & 0.823 & 92.1 & 0.752 & 100.0 \\
+int6 & 580 & 38.0 & 0.1359 & 0.790 & 89.8 & 0.696 & 99.9 \\
+int6-o8 & 590 & $44.2 \pm 0.4$ & 0.1357 & 0.813 & 91.6 & 0.740 & 100.0 \\
+rot-int4 & 388 & $37.7 \pm 0.3$ & 0.1359 & 0.789 & 88.8 & 0.697 & 100.0 \\
+int4-o16 & 412 & 37.6 & 0.1361 & 0.789 & 91.2 & 0.692 & 99.9 \\
+int4 & 388 & $16.0 \pm 0.3$ & 0.1968 & 0.664 & 58.9 & 0.461 & 36.7 \\
+pca256 & 512 & 7.8 & 0.3640 & 0.571 & 34.8 & 0.351 & 37.2 \\
+rp256 & 512 & 2.8 & 0.8626 & 0.485 & 16.3 & 0.265 & 4.6 \\
+\midrule
+seed floor & --- & $23.0 \pm 0.1$ & 0.1355 & 0.721 & (def.) & 0.577 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Pythia-1.4B layer 8, same construction as Table~\ref{tab:m1full}. Codec runs are seed 0 only, so gaps under the $2$\,pp tie band are unresolved; the bracketed intervals resample features against the seed-0/seed-1 floor pair, not seeds. fp16 is bit-lossless under the bf16 master, so its row is a same-seed ceiling.}
+\label{tab:m4l8}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+codec & survived \% & $\times$ floor & stable \% \\
+\midrule
+fp16 (bit-identical ceiling) & 100.0 & 6.35 [6.00, 6.71] & 100.0 \\
+rot-int8 & 43.0 & 2.73 [2.58, 2.87] & 88.0 \\
+int8 & 32.9 & 2.09 [1.98, 2.20] & 84.9 \\
+rot-int4 & 25.8 & 1.64 [1.55, 1.73] & 81.6 \\
+int4 & 2.8 & 0.18 [0.15, 0.20] & 13.7 \\
+\midrule
+seed floor & $15.7 \pm 0.1$ & 1.00$\times$ & (def.) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Pythia-1.4B layer 16. Identical construction, interval convention and bit-identical fp16 ceiling reading to Table~\ref{tab:m4l8}. Source: \texttt{runs\_m4\_L16/eval}.}
+\label{tab:m4l16}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+codec & survived \% & $\times$ floor & stable \% \\
+\midrule
+fp16 (bit-identical ceiling) & 100.0 & 5.44 [5.17, 5.70] & 100.0 \\
+rot-int8 & 38.4 & 2.09 [1.99, 2.18] & 89.3 \\
+int8 & 27.7 & 1.51 [1.44, 1.57] & 83.4 \\
+rot-int4 & 26.1 & 1.42 [1.35, 1.48] & 83.0 \\
+int4 & 0.8 & 0.05 [0.03, 0.06] & 5.1 \\
+\midrule
+seed floor & $18.4 \pm 0.1$ & 1.00$\times$ & (def.) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Frozen-SAE mean $r$ beside retrained agreement at three sites. Within a site the frozen SAE ranks the codecs as retraining does; across sites the same reading carries no level (rot-int8 reads within $0.00005$ everywhere and retrains to $2.09$--$2.73\times$ the local floor). Codec rows are seed 0; floors are three-pair means.}
+\label{tab:transfer}
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+codec & GPT-2 $r$ & retr.\% & L8 $r$ & retr.\% & L16 $r$ & retr.\% \\
+\midrule
+fp16 & 0.99997 & 60.6 & 1.00000 & 100.0 & 1.00000 & 100.0 \\
+rot-int8 & 0.99919 & 53.8 & 0.99922 & 43.0 & 0.99924 & 38.4 \\
+int8 & 0.99632 & 46.6 & 0.99488 & 32.9 & 0.98916 & 27.7 \\
+rot-int4 & 0.98536 & 37.7 & 0.98678 & 25.8 & 0.98696 & 26.1 \\
+int4 & 0.84005 & 15.6 & 0.56333 & 2.8 & 0.15633 & 0.8 \\
+\midrule
+seed floor & --- & 23.0 & --- & 15.7 & --- & 18.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{JumpReLU panel (GPT-2, calibrated $\lambda=8.68$). The viable codecs land within a few points of the floor (fp16 $26.4$, rot-int4 $26.1$, rot-int8 $25.3$ against $23.7$ to $24.2$), too close together for a graded verdict. mean $r$: the retrained best-match correlation averaged over alive features. The fp32 and viable-codec runs end with about a third of latents dead (the na\"ive int4 run about a quarter), and the na\"ive int4 run converged to $L_0 = 38.2$ against fp32's 18.6, so its row is shown but excluded from any verdict as confounded.}
+\label{tab:jumprelu}
+\centering\small
+\begin{tabular}{lrr}
+\toprule
+codec & survived \% & mean $r$ \\
+\midrule
+fp16 & 26.4 & 0.716 \\
+rot-int8 & 25.3 & 0.708 \\
+rot-int4 & 26.1 & 0.708 \\
+int4 & 13.7 & 0.623 \\
+\midrule
+seed floor & 23.7--24.2 & 0.699 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Budget scaling on a fixed stable set ($N = 774$ features at every tier, binomial SE about $1.1$\,pp). fp16 is flat, the rotated codecs improve. fp16's count is $741$ of $774$ at all three tiers by coincidence: the three pairs are distinct runs whose all-alive agreement is $60.6$, $49.2$ and $50.6\%$. Budget was scaled by re-reading one 20M-token cache (up to about 16 passes over the same tokens), so this isolates optimization from data diversity but not from convergence on a fixed corpus; at $3\times$, fresh text gives the same floor (Table~\ref{tab:fresh}).}
+\label{tab:budget}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+budget & stab.\ thresh & fp16 \% & rot-int8 \% & rot-int4 \% & gap pp \\
+\midrule
+$1\times$ (33M visits) & 0.900 & 95.7 & 94.2 & 88.8 & 7.0 \\
+$3\times$ (98M) & 0.936 & 95.7 & 94.7 & 93.5 & 2.2 \\
+$10\times$ (328M) & 0.954 & 95.7 & 96.3 & 94.2 & 1.6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Linear probes: accuracy change against the fp32-trained probe, and learned-direction cosine, each scored against a seven-split resample floor ($0.008$/$0.002$ accuracy and $0.80$/$0.77$ cosine on sst2/ag\_news, mean over splits, with cosine minima $0.788$/$0.759$; \texttt{probe\_floor.json}). Accuracy resolution is one validation example, so read the deltas as counts. PCA-256 keeps accuracy on sst2 but not on ag\_news (its drop there is outside the floor) while its directions collapse to about $0.5$ on both; int4-o16 fails the sst2 direction floor ($0.778$ against a floor minimum of $0.788$) on a test the retraining test passes. The two other codecs with probe runs, int8 and rot-int6, clear both floors on both tasks ($0.991$/$0.995$ and $0.998$/$0.998$ cosine) and are omitted for width.}
+\label{tab:probes}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+task & codec & $\Delta$acc & direction cos \\
+\midrule
+sst2 & fp16 & +0.0011 & 1.000 \\
+sst2 & rot-int8 & +0.0000 & 1.000 \\
+sst2 & rot-int4 & +0.0011 & 0.949 \\
+sst2 & int4-o16 & -0.0080 & 0.778 \\
+sst2 & int4 & -0.0608 & 0.489 \\
+sst2 & pca256 & -0.0046 & 0.500 \\
+ag\_news & fp16 & -0.0001 & 1.000 \\
+ag\_news & rot-int8 & +0.0000 & 1.000 \\
+ag\_news & rot-int4 & +0.0004 & 0.968 \\
+ag\_news & int4-o16 & -0.0017 & 0.937 \\
+ag\_news & int4 & -0.0554 & 0.524 \\
+ag\_news & pca256 & -0.0162 & 0.547 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{The alive cut, swept. Tightening it raises agreement and the floor together and lowers rot-int4's ratio monotonically ($1.63$ to $1.13\times$ on GPT-2); our $0.001$ cut is the loosest of the five. rot-int4 only, so this bounds a ratio, not an ordering; the floor here averages the two seed-0 pairs at each site ($23.1$ against the three-pair $23.0$ on GPT-2).}
+\label{tab:firingrate}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+ & $>0.001$ & $>0.002$ & $>0.005$ & $>0.01$ & $>0.02$ \\
+\midrule
+\textbf{gpt2\_l6} &  &  &  &  &  \\
+n alive & 4860 & 2927 & 1421 & 654 & 201 \\
+floor \% & 23.1 & 27.0 & 33.7 & 40.1 & 47.5 \\
+rot-int4 $\times$floor & 1.63 & 1.50 & 1.38 & 1.28 & 1.13 \\
+\midrule
+\textbf{pythia\_l8} &  &  &  &  &  \\
+n alive & 6573 & 4053 & 1523 & 506 & 100 \\
+floor \% & 15.8 & 16.1 & 20.9 & 24.7 & 36.0 \\
+rot-int4 $\times$floor & 1.63 & 1.62 & 1.43 & 1.34 & 1.14 \\
+\midrule
+\textbf{pythia\_l16} &  &  &  &  &  \\
+n alive & 7088 & 4510 & 1525 & 353 & 73 \\
+floor \% & 18.5 & 19.2 & 25.7 & 46.2 & 58.2 \\
+rot-int4 $\times$floor & 1.41 & 1.37 & 1.30 & 1.22 & 1.06 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Sparsity moves the floor without touching a byte: over a $1.95\times$ swing in the floor, rot-int8's ratio spreads $1.72$--$3.23\times$ while its survival among seed-stable features spreads only $92.8$--$97.1\%$.}
+\label{tab:sparsity}
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+sparsity & seed floor \% & rot-int8 \% & $\times$floor & stable-only \% & $n_{\text{alive}}$ & stable frac \% \\
+\midrule
+$k=16$ & $28.6 \pm 0.8$ & 49.1 & 1.72$\times$ & 92.8 & 2,912 & 21.0 \\
+$k=32$ & $23.0 \pm 0.1$ & 53.8 & 2.34$\times$ & 94.2 & 4,860 & 15.9 \\
+$k=64$ & $14.7 \pm 0.2$ & 47.4 & 3.23$\times$ & 97.1 & 8,269 & 10.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{A treatment that is not a storage codec: computing the cache with a bf16 forward (stored in fp32) beside the storage codecs. Over three seeds the bf16 forward retains $49.7$--$51.2\%$ against rot-int8's $51.6$--$53.8$, disjoint but with $n=3$ (a sign test cannot go below $p=0.25$; within-seed deltas $-2.7$, $-1.8$, $-3.0$\,pp). At $3\times$ budget the comparison reads $44.4$ against $45.3\%$ (one seed each), inside the tie band. It runs $2.21\times$ faster.}
+\label{tab:forward}
+\centering\footnotesize
+\begin{tabular}{lrrrrrrrr}
+\toprule
+treatment & B/tok & rel-L2 & frozen $r$ & survived \% & $\times$floor & stable \% & Hung.\ cos & FVU \\
+\midrule
+fp16 storage & 1536 & 0.00020 & 0.99997 & 60.6 & 2.63 & 95.7 & 0.817 & 0.1355 \\
+rot-int8 storage & 772 & 0.00551 & 0.99919 & 53.8 & 2.34 & 94.2 & 0.786 & 0.1356 \\
+int8-o8 storage & 780 & 0.00928 & 0.99868 & 50.8 & 2.21 & 93.7 & 0.773 & 0.1355 \\
+\textbf{bf16 forward} & \textbf{3072} & \textbf{0.00980} & \textbf{0.99819} & \textbf{51.2} & \textbf{2.22} & \textbf{94.2} & \textbf{0.775} & \textbf{0.1356} \\
+int8 storage & 772 & 0.02660 & 0.99632 & 46.6 & 2.02 & 91.5 & 0.751 & 0.1356 \\
+\midrule
+\textbf{seed floor} & --- & --- & --- & \textbf{23.0} & \textbf{1.00} & (def.) & --- & --- \\
+\midrule
+\textbf{bf16 fwd, 3 seeds} & --- & --- & --- & \textbf{49.7--51.2} & --- & --- & --- & --- \\
+rot-int8, 3 seeds & --- & --- & --- & 51.6--53.8 & --- & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Lossless zstd-3 over the quantized payloads, measured on one shard per codec. Rotated codecs compress only $1.04$--$1.26\times$ further; na\"ive scaling leaves headroom that zstd recovers. Standardization without the rotation lands with the rotated codec ($303.8$ against $307.5$\,B/token).}
+\label{tab:entropy}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+codec & raw B/tok & zstd B/tok & ratio \\
+\midrule
+fp16 & 1536 & 1419.0 & 1.08$\times$ \\
+int8 & 772 & 510.9 & 1.51$\times$ \\
+rot-int8 & 772 & 709.1 & 1.09$\times$ \\
+int6 & 580 & 431.9 & 1.34$\times$ \\
+rot-int6 & 580 & 557.0 & 1.04$\times$ \\
+int4 & 388 & 146.4 & 2.65$\times$ \\
+rot-int4 & 388 & 307.5 & 1.26$\times$ \\
+std-int4 & 388 & 303.8 & 1.28$\times$ \\
+int4-o16 & 412 & 309.1 & 1.33$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Serial loader throughput per store (prefetch $= 0$, warm page cache, one Apple M5). The $1\times$ training run consumes $10{,}017$ tokens/s, so even the slowest store (int4-o16, 55k tokens/s) outruns training; the standardize-and-rotate decode path costs real time (rot-int8 reads at $64\%$ of int8's rate). One-machine numbers. In a paired idle-machine measurement (two interleaved runs each), std-int4 decodes at 88\,MB/s against rot-int4's 89; our std-int4 keeps the rotation matmul with an identity matrix, so this does not isolate the rotation's own cost.}
+\label{tab:throughput}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+codec & B/tok read & disk MB/s & decode MB/s & loader tok/s \\
+\midrule
+fp32 & 3072 & 3094 & 10416 & 383k \\
+fp16 & 1536 & 3085 & 4748 & 445k \\
+int8 & 772 & 2743 & 754 & 319k \\
+rot-int8 & 772 & 2917 & 242 & 205k \\
+int6 & 580 & 2796 & 208 & 228k \\
+rot-int6 & 580 & 2998 & 113 & 147k \\
+int4 & 388 & 2677 & 185 & 270k \\
+rot-int4 & 388 & 2543 & 86 & 162k \\
+int4-o16 & 412 & 3037 & 25 & 55k \\
+pca256 & 512 & 2603 & 402 & 335k \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Ratio to floor as the counting threshold moves. Levels change with the threshold; the ordering and the below-floor verdict for na\"ive int4 do not.}
+\label{tab:threshold}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+ & $r>0.7$ & $r>0.8$ & $r>0.85$ & $r>0.9$ & $r>0.95$ \\
+\midrule
+\textbf{GPT-2 L6} &  &  &  &  &  \\
+floor (survival) & 59.4 & 42.4 & 32.9 & 23.0 & 10.9 \\
+fp16 & 1.45$\times$ & 1.83$\times$ & 2.15$\times$ & 2.63$\times$ & 3.78$\times$ \\
+rot-int8 & 1.39$\times$ & 1.71$\times$ & 1.97$\times$ & 2.34$\times$ & 3.19$\times$ \\
+rot-int4 & 1.22$\times$ & 1.39$\times$ & 1.50$\times$ & 1.63$\times$ & 1.90$\times$ \\
+int4 & 0.83$\times$ & 0.79$\times$ & 0.75$\times$ & 0.68$\times$ & 0.61$\times$ \\
+\midrule
+\textbf{Pythia L8} &  &  &  &  &  \\
+floor (survival) & 56.3 & 36.5 & 26.3 & 15.7 & 6.0 \\
+fp16 & 1.78$\times$ & 2.74$\times$ & 3.80$\times$ & 6.35$\times$ & 16.80$\times$ \\
+rot-int8 & 1.43$\times$ & 1.86$\times$ & 2.19$\times$ & 2.73$\times$ & 3.55$\times$ \\
+rot-int4 & 1.20$\times$ & 1.37$\times$ & 1.49$\times$ & 1.64$\times$ & 1.72$\times$ \\
+int4 & 0.43$\times$ & 0.33$\times$ & 0.25$\times$ & 0.18$\times$ & 0.07$\times$ \\
+\midrule
+\textbf{Pythia L16} &  &  &  &  &  \\
+floor (survival) & 56.9 & 38.9 & 28.9 & 18.4 & 7.7 \\
+fp16 & 1.76$\times$ & 2.57$\times$ & 3.46$\times$ & 5.44$\times$ & 12.98$\times$ \\
+rot-int8 & 1.34$\times$ & 1.60$\times$ & 1.81$\times$ & 2.09$\times$ & 2.50$\times$ \\
+rot-int4 & 1.14$\times$ & 1.25$\times$ & 1.36$\times$ & 1.42$\times$ & 1.55$\times$ \\
+int4 & 0.17$\times$ & 0.10$\times$ & 0.08$\times$ & 0.05$\times$ & 0.02$\times$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Rows are a four-codec slice of a sweep covering 13 codecs at GPT-2 and these four at each Pythia site. Ordering is invariant across it at both Pythia sites. On GPT-2 the only inversions are among rot-int4, int4-o16 and int6 (the last two not shown here), whose largest inverting gap is 0.45\,pp, inside the tie band. Na\"ive int4 is below floor at every threshold at every site.
+\end{table}
+
+\begin{table}[htbp]
+\caption{The noise levels and sparse changes (seed 0; pp/decade is the change in agreement per decade of relative $L_2$ to the next row): isotropic noise at an exact relative $L_2$ and one-ulp changes to a fixed count of values, all stored in fp32 on both sides. Everything from $n=77$ to $15{,}335$ is flat; the one-value change also differs in when it reaches training (Appendix~\ref{app:margins}). The fp16-scale noise and the millionth-of-values change were re-run twice with fresh randomness ($60.6$/$60.4$/$60.8$ and $70.5$/$69.7$/$71.6\%$); the table prints the original runs.}
+\label{tab:dose}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+perturbation & rel-L2 & frozen $r$ & survived \% & pp/decade \\
+\midrule
+zero (bit-exact) & 0 & 1.000000 & \textbf{100.0} & --- \\
+noise $10^{-2}$ & 1.00e-02 & 0.998551 & 51.2 & +7.82 \\
+noise $10^{-3}$ & 1.00e-03 & 0.999847 & 59.0 & +2.38 \\
+fp16 (codec) & 2.03e-04 & 0.999969 & 60.6 & +0.07 \\
+noise $10^{-4}$ & 1.00e-04 & 0.999985 & 60.6 & +1.19 \\
+noise $10^{-5}$ & 1.00e-05 & 0.999999 & 61.8 & +1.69 \\
+noise $10^{-6}$ & 1.00e-06 & 1.000000 & 63.5 & +2.50 \\
+noise $10^{-7}$ & 1.01e-07 & 1.000000 & 66.0 & --- \\
+1 ulp on $10^{-6}$ of entries ($\sim$15k) & 1.59e-12 & 1.000000 & 70.5 & --- \\
+1 ulp on 1{,}526 scalars & 1.70e-13 & 1.000000 & 68.6 & --- \\
+1 ulp on 153 scalars & 9.57e-15 & 1.000000 & 69.3 & --- \\
+1 ulp on 77 scalars & 5.61e-15 & 1.000000 & 69.9 & --- \\
+1 ulp on \textbf{one} scalar & 6.24e-15 & 1.000000 & 99.98 & --- \\
+\midrule
+seed floor & --- & --- & 23.0 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{The noise levels and codecs on the seed-stable stratum ($n = 774$) beside all alive features. The response is flatter still on the stable stratum ($0.35$\,pp per decade from noise $10^{-7}$ to $10^{-4}$, against $2.6$ from fp16 to rot-int4), and the ratio of the two rates depends on the window, so we quote no single ratio.}
+\label{tab:dosestrat}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+arm & rel-L2 & all alive \% & seed-stable \% \\
+\midrule
+noise $10^{-7}$ & 1.01e-07 & 66.0 & 96.4 \\
+noise $10^{-6}$ & 1.00e-06 & 63.5 & 97.0 \\
+noise $10^{-5}$ & 1.00e-05 & 61.8 & 96.1 \\
+noise $10^{-4}$ & 1.00e-04 & 60.6 & 95.3 \\
+noise $10^{-3}$ & 1.00e-03 & 59.0 & 95.9 \\
+noise $10^{-2}$ & 1.00e-02 & 51.2 & 93.4 \\
+fp16 & 2.03e-04 & 60.6 & 95.7 \\
+rot-int8 & 5.51e-03 & 53.8 & 94.2 \\
+rot-int4 & 9.99e-02 & 37.7 & 88.8 \\
+na\"ive int4 & 4.55e-01 & 15.6 & 58.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{How far the two smallest perturbations sit above the seed floor at each counting threshold. The margin is positive everywhere ($11$--$43$\,pp dense, $12$--$47$ sparse) but its size is threshold-dependent.}
+\label{tab:dosemargin}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+criterion & perturbed \% & floor \% & margin (pp) & below ceiling (pp) \\
+\midrule
+\textbf{$10^{-7}$ dense} &  &  &  &  \\
+$r>0.50$ & 95.6 & 83.8 & +11.8 & 4.4 \\
+$r>0.70$ & 88.3 & 59.4 & +28.9 & 11.7 \\
+$r>0.85$ & 76.2 & 32.9 & +43.3 & 23.8 \\
+$r>0.90$ (ours) & 66.0 & 23.0 & +43.0 & 34.0 \\
+$r>0.95$ & 46.3 & 10.9 & +35.4 & 53.7 \\
+$r>0.99$ & 12.2 & 0.8 & +11.4 & 87.8 \\
+\midrule
+\textbf{sparse, 1 ulp on $10^{-6}$} &  &  &  &  \\
+$r>0.50$ & 96.1 & 83.8 & +12.3 & 3.9 \\
+$r>0.70$ & 89.8 & 59.4 & +30.4 & 10.2 \\
+$r>0.85$ & 79.3 & 32.9 & +46.4 & 20.7 \\
+$r>0.90$ (ours) & 70.5 & 23.0 & +47.4 & 29.5 \\
+$r>0.95$ & 52.1 & 10.9 & +41.3 & 47.9 \\
+$r>0.99$ & 15.1 & 0.8 & +14.2 & 84.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{The causal test: a difference-in-means steering vector injected into the residual stream, scored against the variation between two disjoint halves of the same data (the half-versus-half floor runs about twice a full-data comparison, so it is conservative only for a fail; the like-for-like referent is half the floor). Na\"ive int4 fails at least $399$ of $400$ resample splits on both tasks; PCA-256 passes on average but fails $51$ of $400$ ag\_news splits against the like-for-like referent; task-matched prompts and a strength sweep leave every verdict unchanged.}
+\label{tab:steering}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+codec & direction cos & causal cos & effect/floor \\
+\midrule
+\textbf{ag\_news} (floor 0.9995 / 0.9998) &  &  &  \\
+fp16 & 1.0000 & 1.0000 & 0.002 \\
+rot-int8 & 1.0000 & 1.0000 & 0.007 \\
+rot-int4 & 1.0000 & 1.0000 & 0.053 \\
+pca256 & 0.9998 & 0.9999 & 0.276 \\
+int4 & 0.7901 & 0.8294 & 13.713  \textbf{FAIL} \\
+\midrule
+\textbf{sst2} (floor 0.9851 / 0.9877) &  &  &  \\
+fp16 & 1.0000 & 1.0000 & 0.001 \\
+rot-int8 & 1.0000 & 1.0000 & 0.003 \\
+rot-int4 & 0.9999 & 1.0000 & 0.056 \\
+pca256 & 0.9991 & 0.9998 & 0.245 \\
+int4 & 0.8763 & 0.9702 & 2.354  \textbf{FAIL} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Which step repairs 4-bit. std-int4 is byte-identical to rot-int4 with the rotation set to the identity, so the two differ by exactly the rotation: standardization alone gives $38.0 \pm 0.9$\%, adding the rotation $37.7 \pm 0.3$\%, inside the tie band. All three arms are three-seed means over same-seed pairs. The ablation keeps the rotation matmul, so it isolates the rotation's effect, not its decode cost.}
+\label{tab:ablation}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+arm & B/tok & rel-$L_2$ & frozen $r$ & survived \% & $\times$floor \\
+\midrule
+na\"ive int4 & 388 & 0.4553 & 0.84005 & $16.0 \pm 0.3$ & 0.69$\times$ \\
+\textbf{std-int4} (standardize only) & 388 & 0.1033 & 0.98466 & $38.0 \pm 0.9$ & 1.65$\times$ \\
+rot-int4 (standardize $+$ rotate) & 388 & 0.0999 & 0.98536 & $37.7 \pm 0.3$ & 1.64$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Is codec damage a shared bias or seed-like noise? On the fp32 seed-stable set ($n=774$), losses are enriched above independence for every codec, so a shared component exists, but under rot-int8 only $0.13\%$ of seed-stable features are lost in all three seeds against $24.2\%$ under na\"ive int4. Recomputed from released pair files; no training.}
+\label{tab:consensus}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+codec & lost/seed \% & P(lost s1 $|$ lost s0) \% & indep.\ \% & lost all 3 \% & indep.\ \% \\
+\midrule
+rot-int8 & 6.1 & 17.8 & 6.3 & 0.13 & 0.023 \\
+rot-int4 & 11.1 & 25.3 & 12.0 & 0.90 & 0.134 \\
+int4 & 41.0 & 75.5 & 42.9 & 24.16 & 6.876 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Survival among seed-stable / seed-unstable features under four definitions of stability: activation-space matching at three thresholds, and weight-space Hungarian matching on encoder$+$decoder cosine. Under every definition the viable codecs keep far more of the stable features than of the unstable ones (stable 62.9 to 98.8\%, unstable 19.9 to 57.9\%), and na\"ive int4 is lowest on both; the levels move with the definition, so a stratified percentage is only interpretable with its definition attached. On Pythia the viable codecs keep 18.6 to 38.3\% of the unstable features (\texttt{runs\_m4\_L8}, \texttt{runs\_m4\_L16} stability files). GPT-2 L6, seed 0. Sources: \texttt{stability\_fp32\_s0\_t0p*.json}, \texttt{stability\_hungarian.json}.}
+\label{tab:stabdef}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+codec & $r>0.8$ \% & $r>0.9$ \% & $r>0.95$ \% & Hungarian \% \\
+\midrule
+fp16 & 90.1 / 46.1 & 95.7 / 54.0 & 97.3 / 57.9 & 80.7 / 52.7 \\
+rot-int8 & 86.0 / 38.0 & 94.2 / 46.2 & 98.8 / 50.5 & 76.4 / 44.9 \\
+rot-int4 & 73.8 / 19.9 & 88.8 / 28.0 & 95.5 / 33.3 & 62.9 / 27.7 \\
+int4 & 41.3 / 2.9 & 58.9 / 7.4 & 73.6 / 11.3 & 26.9 / 11.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Spearman rank agreement of three cheap readings with retrained agreement over every released condition per site. The 15 GPT-2 conditions are the 13 storage codecs of Table~\ref{tab:m1full} plus the bf16 forward and the std-int4 ablation. None of the three needs a retrained SAE, and none ranks better than the others.}
+\label{tab:proxyrank}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+site & $n$ & frozen $r$ $\rho$ & rel-$L_2$ $\rho$ & cosine $\rho$ \\
+\midrule
+GPT-2 L6 & 15 & 0.982 & 0.979 & 0.982 \\
+Pythia L8 & 5 & 1.000 & 1.000 & 1.000 \\
+Pythia L16 & 5 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Predicting per-feature survival from fp32 statistics. CV AUC: a logistic model on all three, 5-fold cross-validated; the other columns are single-statistic AUCs. Mean activation is the strongest single predictor, unlike the peak activation reported for weight quantization.}
+\label{tab:fragility}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+codec & CV AUC & mean act & peak act & rate \\
+\midrule
+rot-int6 & 0.836 & 0.758 & 0.713 & 0.552 \\
+rot-int4 & 0.844 & 0.755 & 0.711 & 0.570 \\
+int4-o16 & 0.831 & 0.749 & 0.711 & 0.564 \\
+int6 & 0.838 & 0.747 & 0.709 & 0.573 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Do matched features do the same thing? 300 sampled alive fp32 features, each removed from the residual stream on its 32 strongest held-out rows, then its best match in each retrained SAE on the same rows. Same effect: cosine above $0.9$ between the two changes in next-token log-probabilities; the last three columns are medians. std-int4 exceeds reseeding by 15.7\,pp (95\% CI 10.5 to 20.8); among pairs matched at $r > 0.9$ its effects are as close as a reseed's (median difference $+0.014$, CI $-0.018$ to $+0.042$). Seed 0, one sample.}
+\label{tab:featablation}
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+condition & $r > 0.9$ & same effect & same $|\,r > 0.9$ & effect cos & $\Delta$logp $r$ & top-50 ctx \\
+\midrule
+identical bytes & 100.0 & 100.0 & 100.0 & 1.000 & 1.000 & 1.00 \\
+1 ulp on $10^{-6}$ of values & 73.0 & 79.7 & 94.5 & 0.971 & 0.966 & 0.82 \\
+fp16 & 63.7 & 68.0 & 89.5 & 0.942 & 0.935 & 0.78 \\
+std-int4 & 38.7 & 38.7 & 73.3 & 0.842 & 0.816 & 0.62 \\
+na\"ive int4 & 15.7 & 12.7 & 46.8 & 0.651 & 0.584 & 0.38 \\
+reseed, seed 1 & 26.0 & 22.7 & 53.8 & 0.748 & 0.687 & 0.48 \\
+reseed, seed 2 & 22.3 & 23.3 & 64.2 & 0.727 & 0.680 & 0.46 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Is a lost feature gone or re-cut? Share of alive fp32 features recovered on held-out tokens by a least-squares map from their $m$ best-correlated partners ($R^2 > 0.81$, so $m{=}1$ is the retraining count re-scored on these tokens). Recovering from four partners keeps std-int4 13.4\,pp above reseeding (three seeds each). Lost: of the features lost at $m{=}1$, the share four partners recover, 12--15\% in every condition but na\"ive int4; four random partners recover at most 0.12\%. Set EV: the lost features' top-64 decoder subspace, applied to the retrained SAE's unmatched features, as a fraction of its within-SAE value~\citep{reprosubspaces}. $\pm$ rows are three runs.}
+\label{tab:subspace}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+condition & $m{=}1$ & $m{=}4$ & $m{=}8$ & lost, $m{=}4$ & set EV \\
+\midrule
+identical bytes & 100.0 & 100.0 & 100.0 & --- & --- \\
+1 ulp on $10^{-6}$ of values & $70.4 \pm 1.1$ & $74.0 \pm 1.2$ & $75.2 \pm 1.1$ & $13.2 \pm 1.2$ & $0.89 \pm 0.00$ \\
+fp16 & 60.1 & 65.6 & 67.3 & 14.0 & 0.91 \\
+rot-int4 & 37.7 & 46.7 & 50.0 & 14.8 & 0.93 \\
+std-int4 & $37.9 \pm 0.8$ & $46.6 \pm 0.8$ & $49.7 \pm 0.8$ & $14.3 \pm 0.1$ & $0.91 \pm 0.01$ \\
+na\"ive int4 & 15.6 & 22.4 & 26.2 & 8.5 & 0.73 \\
+reseed & $22.9 \pm 0.3$ & $33.2 \pm 0.4$ & $37.8 \pm 0.4$ & $13.5 \pm 0.4$ & $0.92 \pm 0.00$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Fresh text against replay at the $3\times$ budget (98.3M token-visits). Floors are three seed pairs; codec rows are same-seed pairs at three seeds, all $\pm$ half the range. Stable: features matched above $r = 0.9$ in both other fp32 seeds of the same regime; fixed-774: the top 774 by cross-seed agreement, as in Table~\ref{tab:budget}. The fresh floor sits +0.09\,pp from the replay floor and std-int4 keeps the same lead in both regimes.}
+\label{tab:fresh}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+regime & SAE & agreement \% & $\times$floor & stable \% & fixed-774 \% \\
+\midrule
+replay (20M, $\sim$5 passes) & floor (fp32 reseed) & $33.3 \pm 0.1$ & 1.00 & --- & --- \\
+ & fp16 & $49.0 \pm 0.7$ & 1.47 & $92.0 \pm 0.2$ & $95.8 \pm 0.4$ \\
+ & std-int4 & $38.7 \pm 0.6$ & 1.16 & $87.8 \pm 1.9$ & $93.7 \pm 1.7$ \\
+\midrule
+fresh (98.5M, one pass) & floor (fp32 reseed) & $33.4 \pm 0.3$ & 1.00 & --- & --- \\
+ & std-int4 & $38.8 \pm 0.3$ & 1.16 & $88.0 \pm 1.5$ & $93.6 \pm 1.2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Equal stored bytes at $3\times$: fp16 on the 20M-token cache against std-int4 on the first 79.0M tokens of the fresh store, in 99.76\% of fp16's bytes. Agreement is cross-seed against fresh fp32 (six pairs per candidate, mean and range), so no candidate shares an initialization or data order with its reference; the reference row is fresh fp32 against itself across seeds (three pairs). The two candidates differ by +0.02\,pp: a tie. $^\dagger$Post-hoc resolution check, not pre-registered (na\"ive int4: seed 0 only, two pairs).}
+\label{tab:equalbytes}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+candidate & tokens (M) & stored GB & agreement \% & $\times$ref \\
+\midrule
+fp32, fresh (reference) & 98.5 & 303 & 33.4 (33.2--33.7) & 1.00 \\
+fp16, replayed & 20.0 & 30.7 & 32.6 (32.0--33.0) & 0.974 \\
+std-int4, more text & 79.0 & 30.6 & 32.6 (31.4--33.3) & 0.974 \\
+\midrule
+fp32, replayed$^\dagger$ & 20.0 & 61.4 & 32.8 (31.8--33.2) & 0.980 \\
+na\"ive int4, replayed$^\dagger$ & 20.0 & 7.8 & 15.9 (15.7--16.1) & 0.476 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Training throughput on an A100 (thousand tokens/s, full $1\times$ run, mean of two fresh containers) by cache format and where the loader decodes; busy is the share of training time the loader spent reading, decoding and shuffling. Every decode path of a format trains bit-identical weights. Best std-int4 over best fp32: 1.09 from local disk, 1.04 from the network volume, under the pre-registered $1.10$ for a material gain. Volume reads varied 60--840\,MB/s between runs.}
+\label{tab:timing}
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+format & decode & local & busy & volume & busy \\
+\midrule
+fp32 & CPU (paper) & 117.0 & 0.83 & 75.1 & 0.99 \\
+ & GPU & 118.5 & 0.51 & 119.5 & 0.53 \\
+fp16 & CPU (paper) & 114.6 & 0.89 & 115.1 & 0.84 \\
+ & GPU & 121.0 & 0.28 & 119.7 & 0.33 \\
+std-int4 & CPU (paper) & 92.9 & 0.99 & 50.1 & 1.00 \\
+ & CPU, no matmul & 92.6 & 0.99 & 90.9 & 0.99 \\
+ & GPU & 129.1 & 0.08 & 123.8 & 0.20 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{The frozen-SAE test explained by TopK margins (GPT-2 layer 6, the frozen test's own SAE and tokens). model: Spearman correlation, over alive features, between predicted and measured frozen disagreement $1-r$; the prediction uses only the second moment of the codec's error, estimated on held-out tokens, and the SAE's margins on clean activations. statistic: the largest $|\rho|$ of log firing rate, log mean or log peak activation with $1-r$. crossing \%: median share of a degraded or damaged feature's squared error that comes from tokens where it is active on one side only (--: not reported for the noise-like codecs, which have at most 6 degraded or damaged features each). Below the rule, codecs that remove part of the signal rather than add noise. Sources: \texttt{geom\_margins.json}, \texttt{geom\_summary.json}.}
+\label{tab:margins}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+codec & frozen mean $r$ & model $\rho$ & statistic $|\rho|$ & crossing \% \\
+\midrule
+fp16 & 1.0000 & 0.736 & 0.644 & -- \\
+bf16 & 0.9998 & 0.888 & 0.734 & -- \\
+int8 & 0.9963 & 0.989 & 0.843 & -- \\
+int8-o8 & 0.9987 & 0.966 & 0.818 & -- \\
+int6 & 0.9832 & 0.991 & 0.861 & -- \\
+int6-o8 & 0.9948 & 0.979 & 0.838 & -- \\
+rot-int8 & 0.9992 & 0.959 & 0.795 & -- \\
+rot-int6 & 0.9969 & 0.984 & 0.818 & -- \\
+rot-int4 & 0.9854 & 0.988 & 0.830 & -- \\
+std-int4 & 0.9847 & 0.980 & 0.835 & -- \\
+int4-o16 & 0.9821 & 0.992 & 0.869 & -- \\
+\midrule
+int4 & 0.8401 & 0.861 & 0.875 & 84 \\
+pca256 & 0.8098 & 0.877 & 0.829 & 46 \\
+rp256 & 0.5796 & 0.608 & 0.681 & 57 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Predicting from one SAE which features retraining recovers (GPT-2 layer 6, AUC). Above the rule the target is seed stability (best match $r>0.9$ in both other seeds); the logistic model is fit once on the $1\times$, $k=32$ SAE (its row is cross-validated) and applied unchanged to the other regimes' own SAEs. Below the rule, the same seed-fit model predicts which features survive retraining on each codec. positive \%: seed-stable or retained share of alive features. statistics: log firing rate, log mean and log peak activation. geometry: co-firing share with the best partner, decoder coherence, co-firing of the nearest decoder atom, TopK margin relative to the activation, encoder-decoder cosine. Predictors use held-out eval tokens. Source: \texttt{geom\_identifiability.json}.}
+\label{tab:stabpredict}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+target & positive \% & statistics & geometry & both \\
+\midrule
+$1\times$, $k=32$ (fit) & 15.9 & 0.846 & 0.829 & 0.868 \\
+$3\times$ & 24.9 & 0.787 & 0.741 & 0.794 \\
+$10\times$ & 32.9 & 0.762 & 0.696 & 0.752 \\
+$3\times$ fresh text & 24.9 & 0.793 & 0.738 & 0.794 \\
+$k=16$ & 21.0 & 0.817 & 0.801 & 0.837 \\
+$k=64$ & 10.1 & 0.899 & 0.842 & 0.902 \\
+\midrule
+fp16 survival & 60.6 & 0.832 & 0.743 & 0.808 \\
+rot-int4 survival & 37.7 & 0.841 & 0.760 & 0.828 \\
+std-int4 survival & 38.0 & 0.830 & 0.762 & 0.824 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{In this run, when a perturbation reaches training decides its cost (GPT-2 layer 6, seed 0, one run per row). Each perturbed run is a copy of the reference run, which reproduces Table~\ref{tab:m1full}'s fp32 seed-0 SAE bit for bit, that receives the change at the listed step(s) and trains on the same batches. agreement: the paper's retained percentage against the reference. distance: relative Frobenius distance of the decoder from the reference's, at the end and 2,000 steps after the change. The one-ulp row replays the one-scalar experiment (its altered value enters training twice; the weights are bit-identical to the reference at every logged step from 130 until the second entry; optimizer moments were not compared) and reproduces that SAE bit for bit. The last row is not a copy: it is the separately trained noise7 SAE of Table~\ref{tab:dose}, where every batch carries the change, scored against the same reference. Sources: \texttt{geom\_summary.json}, \texttt{pair\_geomdyn\_*.json}.}
+\label{tab:dynamics}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+change & step & agreement \% & distance & +2{,}000 steps \\
+\midrule
+$10^{-7}$, one batch & 0 & 64.7 & 0.6561 & 0.2338 \\
+ & 4{,}000 & 99.9 & 0.0830 & 0.0452 \\
+ & 6{,}000 & 100.0 & 0.0301 & 0.0301 \\
+ & 7{,}000 & 100.0 & 0.0198 & -- \\
+ & 7{,}500 & 100.0 & 0.0107 & -- \\
+ & 7{,}800 & 100.0 & 0.0041 & -- \\
+ & 7{,}950 & 100.0 & 0.0001 & -- \\
+\midrule
+one ulp, one value & 112, 4{,}970 & 99.98 & 0.0562 & -- \\
+$10^{-7}$, every batch & all & 66.0 & 0.6447 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

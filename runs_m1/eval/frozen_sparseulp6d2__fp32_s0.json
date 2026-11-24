@@ -1,0 +1,32 @@
+{
+  "mode": "frozen",
+  "codec": "sparseulp6d2",
+  "sae": "fp32_s0",
+  "n_eval_tokens": 500000,
+  "direct": {
+    "rel_l2_mean": 1.5545709544273464e-12,
+    "rel_l2_p99": 0.0,
+    "cos_mean": 0.9999999999999993,
+    "cos_min": 0.9999999999999971
+  },
+  "n_alive": 4860,
+  "mean_corr": 1.0,
+  "median_corr": 1.0,
+  "survived": 1.0,
+  "degraded": 0.0,
+  "damaged": 0.0,
+  "nan_frac": 0.0,
+  "corr_deciles": [
+    0.9999999999999996,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0000000000000004
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "mode": "frozen",
+  "codec": "fp16",
+  "sae": "fp32_s0",
+  "n_eval_tokens": 500000,
+  "direct": {
+    "rel_l2_mean": 0.0,
+    "rel_l2_p99": 0.0,
+    "cos_mean": 0.9999991059303284,
+    "cos_min": 0.999998152256012
+  },
+  "n_alive": 6573,
+  "mean_corr": 1.0,
+  "median_corr": 1.0,
+  "survived": 1.0,
+  "degraded": 0.0,
+  "damaged": 0.0,
+  "nan_frac": 0.0,
+  "corr_deciles": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "codec": "pca256",
+  "codec_state": {
+    "kind": "pca",
+    "r": 256,
+    "d": 768
+  },
+  "codec_state_file": "codec_state.npz",
+  "codec_state_bytes": 789504,
+  "d": 768,
+  "n_tokens": 1000125,
+  "source": "runs_m1/cache/master-eval",
+  "payload_bytes": 512064000,
+  "payload_bytes_per_token": 512.0,
+  "disk_bytes_per_token": 512.001023872016,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 134217728,
+      "disk_bytes": 134217984
+    },
+    {
+      "file": "shard_00001.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 134217728,
+      "disk_bytes": 134217984
+    },
+    {
+      "file": "shard_00002.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 134217728,
+      "disk_bytes": 134217984
+    },
+    {
+      "file": "shard_00003.npz",
+      "n_tokens": 213693,
+      "payload_bytes": 109410816,
+      "disk_bytes": 109411072
+    }
+  ]
+}

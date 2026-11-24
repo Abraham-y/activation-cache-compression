@@ -1,0 +1,31 @@
+{
+  "mode": "stability",
+  "ref": "fp32_k64_s0",
+  "seed_pairs": [
+    "fp32_k64_s1",
+    "fp32_k64_s2"
+  ],
+  "threshold": 0.9,
+  "n_alive": 8269,
+  "stable_frac_of_alive": 0.10134236304268956,
+  "rows": [
+    {
+      "cand": "fp32_k64_s1",
+      "survived_all": 0.14874833716289756,
+      "survived_stable": 1.0,
+      "survived_unstable": 0.05275198492800431
+    },
+    {
+      "cand": "fp32_k64_s2",
+      "survived_all": 0.14499939533196277,
+      "survived_stable": 1.0,
+      "survived_unstable": 0.048580271834208044
+    },
+    {
+      "cand": "rot-int8_k64_s0",
+      "survived_all": 0.473576006772282,
+      "survived_stable": 0.9713603818615751,
+      "survived_unstable": 0.4174404521598708
+    }
+  ]
+}

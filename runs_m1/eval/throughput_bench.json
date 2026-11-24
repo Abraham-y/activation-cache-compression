@@ -1,0 +1,113 @@
+{
+  "note": "prefetch=0 (serial) for clean split timings; warm page cache; single M5 laptop",
+  "fp32": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 3221226496,
+    "read_seconds": 2.735848250100389,
+    "disk_seconds": 1.0412351241102442,
+    "decode_seconds": 0.30924958491232246,
+    "read_disk_MB_per_s": 3093.659079886112,
+    "decode_MB_per_s": 10416.26780813068,
+    "pipeline_MB_per_s": 1177.4141697668356,
+    "read_tokens_per_s": 383272.7198818588
+  },
+  "fp16": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 1610613760,
+    "read_seconds": 2.3556032499764115,
+    "disk_seconds": 0.5221396670676768,
+    "decode_seconds": 0.3391900840215385,
+    "read_disk_MB_per_s": 3084.6416420441037,
+    "decode_MB_per_s": 4748.410510425553,
+    "pipeline_MB_per_s": 683.7372804678073,
+    "read_tokens_per_s": 445141.1756247578
+  },
+  "int8": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 809502664,
+    "read_seconds": 3.287645332980901,
+    "disk_seconds": 0.29510429012589157,
+    "decode_seconds": 1.0736034589353949,
+    "read_disk_MB_per_s": 2743.107067859522,
+    "decode_MB_per_s": 754.0052682046291,
+    "pipeline_MB_per_s": 246.2256667041471,
+    "read_tokens_per_s": 318944.3792738003
+  },
+  "rot-int8": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 809502664,
+    "read_seconds": 5.107609666069038,
+    "disk_seconds": 0.2775466670282185,
+    "decode_seconds": 3.3411197511013597,
+    "read_disk_MB_per_s": 2916.636227945396,
+    "decode_MB_per_s": 242.28483990529142,
+    "pipeline_MB_per_s": 158.4895316840091,
+    "read_tokens_per_s": 205296.81564468765
+  },
+  "int6": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 608176072,
+    "read_seconds": 4.596936249989085,
+    "disk_seconds": 0.21753333299420774,
+    "decode_seconds": 2.918146957992576,
+    "read_disk_MB_per_s": 2795.783357101387,
+    "decode_MB_per_s": 208.4117355139546,
+    "pipeline_MB_per_s": 132.30030588339008,
+    "read_tokens_per_s": 228103.22853672155
+  },
+  "rot-int6": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 608176072,
+    "read_seconds": 7.1436748750275,
+    "disk_seconds": 0.20285250013694167,
+    "decode_seconds": 5.3897814999800175,
+    "read_disk_MB_per_s": 2998.1196760672533,
+    "decode_MB_per_s": 112.83872490976765,
+    "pipeline_MB_per_s": 85.1349036230682,
+    "read_tokens_per_s": 146783.83581895073
+  },
+  "int4": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 406849480,
+    "read_seconds": 3.8883099170634523,
+    "disk_seconds": 0.15200558386277407,
+    "decode_seconds": 2.2005132911726832,
+    "read_disk_MB_per_s": 2676.5429904686334,
+    "decode_MB_per_s": 184.88844472426902,
+    "pipeline_MB_per_s": 104.63401546635531,
+    "read_tokens_per_s": 269673.9772203936
+  },
+  "rot-int4": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 406849480,
+    "read_seconds": 6.485071709030308,
+    "disk_seconds": 0.15999070787802339,
+    "decode_seconds": 4.721038832794875,
+    "read_disk_MB_per_s": 2542.9569341625843,
+    "decode_MB_per_s": 86.1779566763579,
+    "pipeline_MB_per_s": 62.73631167924817,
+    "read_tokens_per_s": 161690.73327899873
+  },
+  "int4-o16": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 432016296,
+    "read_seconds": 19.13313575007487,
+    "disk_seconds": 0.14223708305507898,
+    "decode_seconds": 17.500653458060697,
+    "read_disk_MB_per_s": 3037.2972133624867,
+    "decode_MB_per_s": 24.685723709420454,
+    "pipeline_MB_per_s": 22.579482090295077,
+    "read_tokens_per_s": 54804.189637127136
+  },
+  "pca256": {
+    "tokens_read": 1048576,
+    "disk_bytes_read": 536871936,
+    "read_seconds": 3.133435667026788,
+    "disk_seconds": 0.2062832498922944,
+    "decode_seconds": 1.3360519589623436,
+    "read_disk_MB_per_s": 2602.595878629574,
+    "decode_MB_per_s": 401.83462357030356,
+    "pipeline_MB_per_s": 171.33651143679606,
+    "read_tokens_per_s": 334640.9856229659
+  }
+}

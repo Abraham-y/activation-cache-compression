@@ -1,0 +1,25 @@
+{
+  "arch": "jumprelu",
+  "probes": [
+    [
+      0.3,
+      524.73486328125
+    ],
+    [
+      3.0,
+      91.6591796875
+    ],
+    [
+      30.0,
+      9.35986328125
+    ]
+  ],
+  "chosen_coef": 8.676435959031217,
+  "mode": "interpolated",
+  "l0_at_chosen": 28.4951171875,
+  "intended_l0": 32.0,
+  "target_l0": 32.0,
+  "probe_steps": 600,
+  "valid": true,
+  "target_achieved": true
+}

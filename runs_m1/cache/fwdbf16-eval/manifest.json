@@ -1,0 +1,41 @@
+{
+  "codec": "fp32",
+  "codec_state": {
+    "dtype": "fp32",
+    "d": 768
+  },
+  "codec_state_file": null,
+  "codec_state_bytes": 0,
+  "d": 768,
+  "n_tokens": 1000125,
+  "source": "runs_m1/tokens/tokens_eval.npy",
+  "payload_bytes": 3072384000,
+  "payload_bytes_per_token": 3072.0,
+  "disk_bytes_per_token": 3072.001023872016,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "shard_00001.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "shard_00002.npz",
+      "n_tokens": 262144,
+      "payload_bytes": 805306368,
+      "disk_bytes": 805306624
+    },
+    {
+      "file": "shard_00003.npz",
+      "n_tokens": 213693,
+      "payload_bytes": 656464896,
+      "disk_bytes": 656465152
+    }
+  ]
+}

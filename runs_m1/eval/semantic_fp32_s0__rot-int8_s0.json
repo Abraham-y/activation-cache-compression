@@ -1,0 +1,22 @@
+{
+  "mode": "semantic",
+  "ref": "fp32_s0",
+  "cand": "rot-int8_s0",
+  "n_tokens": 150000,
+  "top_n": 50,
+  "survived": {
+    "n": 2616,
+    "pos_overlap_mean": 0.833256880733945,
+    "tok_jaccard_mean": 0.7953097329860543
+  },
+  "degraded": {
+    "n": 1968,
+    "pos_overlap_mean": 0.5835418020454354,
+    "tok_jaccard_mean": 0.4882109896864279
+  },
+  "damaged": {
+    "n": 276,
+    "pos_overlap_mean": 0.2105400230691242,
+    "tok_jaccard_mean": 0.19005197778950905
+  }
+}

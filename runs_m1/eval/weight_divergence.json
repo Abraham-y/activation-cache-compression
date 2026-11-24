@@ -1,0 +1,78 @@
+{
+  "reference": "fp32_s0",
+  "note": "Weight-space divergence between trained SAEs, on scale-appropriate stats.\n\nmax |delta| over a 9.4M-entry tensor is the least stable statistic\navailable, and reporting it made a one-scalar data perturbation look like\nit moved the weights a lot. It did not: relative Frobenius against a\nreseed is the right normaliser, and by that measure the same run sits at\n4% of a reseed with every alive latent still best-matching itself.",
+  "arms": {
+    "fp32_s0_r1": {
+      "W_dec": {
+        "max_abs": 0.0,
+        "rel_frobenius": 0.0,
+        "median_abs": 0.0
+      },
+      "W_enc": {
+        "max_abs": 0.0,
+        "rel_frobenius": 0.0,
+        "median_abs": 0.0
+      }
+    },
+    "oneulp_s0": {
+      "W_dec": {
+        "max_abs": 0.18907439708709717,
+        "rel_frobenius": 0.05622076896515705,
+        "median_abs": 0.0005554035305976868
+      },
+      "W_enc": {
+        "max_abs": 0.10412553185597062,
+        "rel_frobenius": 0.07152226104730264,
+        "median_abs": 0.0014701802283525467
+      }
+    },
+    "sparseulp6_s0": {
+      "W_dec": {
+        "max_abs": 0.3215006151003763,
+        "rel_frobenius": 0.5968250685558184,
+        "median_abs": 0.008417192846536636
+      },
+      "W_enc": {
+        "max_abs": 0.2476651594042778,
+        "rel_frobenius": 0.5141117890656245,
+        "median_abs": 0.01030750572681427
+      }
+    },
+    "noise7_s0": {
+      "W_dec": {
+        "max_abs": 0.33296672254800797,
+        "rel_frobenius": 0.6447414826696299,
+        "median_abs": 0.00948399305343628
+      },
+      "W_enc": {
+        "max_abs": 0.24761516600847244,
+        "rel_frobenius": 0.5580056133922211,
+        "median_abs": 0.011467944830656052
+      }
+    },
+    "fp16_s0": {
+      "W_dec": {
+        "max_abs": 0.4144968166947365,
+        "rel_frobenius": 0.6964979283629343,
+        "median_abs": 0.010729240253567696
+      },
+      "W_enc": {
+        "max_abs": 0.3734864629805088,
+        "rel_frobenius": 0.6041333252565011,
+        "median_abs": 0.012763991951942444
+      }
+    },
+    "fp32_s1": {
+      "W_dec": {
+        "max_abs": 0.9401302747428417,
+        "rel_frobenius": 1.4091632226517328,
+        "median_abs": 0.033637530868873
+      },
+      "W_enc": {
+        "max_abs": 0.9385216720402241,
+        "rel_frobenius": 1.3540879891118827,
+        "median_abs": 0.03876756690442562
+      }
+    }
+  }
+}

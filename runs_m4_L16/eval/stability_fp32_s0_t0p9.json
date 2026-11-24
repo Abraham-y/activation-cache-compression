@@ -1,0 +1,55 @@
+{
+  "mode": "stability",
+  "ref": "fp32_s0",
+  "seed_pairs": [
+    "fp32_s1",
+    "fp32_s2"
+  ],
+  "threshold": 0.9,
+  "n_alive": 7088,
+  "stable_frac_of_alive": 0.11639390519187359,
+  "rows": [
+    {
+      "cand": "fp16_s0",
+      "survived_all": 1.0,
+      "survived_stable": 1.0,
+      "survived_unstable": 1.0
+    },
+    {
+      "cand": "fp32_s1",
+      "survived_all": 0.1845372460496614,
+      "survived_stable": 1.0,
+      "survived_unstable": 0.07711959125019958
+    },
+    {
+      "cand": "fp32_s2",
+      "survived_all": 0.1848194130925508,
+      "survived_stable": 1.0,
+      "survived_unstable": 0.07743892703177391
+    },
+    {
+      "cand": "int4_s0",
+      "survived_all": 0.00832392776523702,
+      "survived_stable": 0.05090909090909091,
+      "survived_unstable": 0.002714354143381766
+    },
+    {
+      "cand": "int8_s0",
+      "survived_all": 0.2773702031602709,
+      "survived_stable": 0.833939393939394,
+      "survived_unstable": 0.20405556442599393
+    },
+    {
+      "cand": "rot-int4_s0",
+      "survived_all": 0.26058126410835214,
+      "survived_stable": 0.8303030303030303,
+      "survived_unstable": 0.18553408909468305
+    },
+    {
+      "cand": "rot-int8_s0",
+      "survived_all": 0.3838882618510158,
+      "survived_stable": 0.8933333333333333,
+      "survived_unstable": 0.3167810953217308
+    }
+  ]
+}

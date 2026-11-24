@@ -1,0 +1,17 @@
+{
+  "mode": "permutation_null_cross",
+  "ref": "fp32_s0",
+  "cand": "rot-int4_s0",
+  "offset_tokens": null,
+  "permuted": true,
+  "n_eval_tokens": 500000,
+  "n_alive": 4860,
+  "note": "best-of-d_sae matching between two SAEs on MISALIGNED token positions: every match here is chance selection. Compare against the survival threshold of 0.9.",
+  "mean_best_corr": 0.020132136818569832,
+  "p99_best_corr": 0.045235089020149444,
+  "max_best_corr": 0.10581124432148384,
+  "frac_above_0.9": 0.0,
+  "frac_above_0.5": 0.0,
+  "survived": 0.0,
+  "damaged": 1.0
+}

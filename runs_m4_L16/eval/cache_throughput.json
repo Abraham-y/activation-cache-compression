@@ -1,0 +1,18 @@
+{
+  "site": "runs_m4_L16",
+  "model_dtype": "bf16",
+  "note": "Forward/cache-build throughput, store write included. PROVENANCE IS WEAKER THAN THE REST OF THE PAPER: the master manifests that originally carried this were reclaimed by cleanup.sh, so these are parsed from runs_m4.log, where tok/s is already rounded to whole tokens per second. Regenerate with scripts/snapshot_m4_cache_throughput.py.",
+  "source": "runs_m4.log",
+  "train": {
+    "n_tokens": 10000107,
+    "bytes_per_token": 8192,
+    "tokens_per_s": 2146,
+    "seconds": 4668.8
+  },
+  "eval": {
+    "n_tokens": 1000125,
+    "bytes_per_token": 8192,
+    "tokens_per_s": 2204,
+    "seconds": 460.3
+  }
+}

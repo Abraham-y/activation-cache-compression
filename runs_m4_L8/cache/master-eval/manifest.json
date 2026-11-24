@@ -1,0 +1,65 @@
+{
+  "codec": "fp32",
+  "codec_state": {
+    "dtype": "fp32",
+    "d": 2048
+  },
+  "codec_state_file": null,
+  "codec_state_bytes": 0,
+  "d": 2048,
+  "n_tokens": 1000125,
+  "source": "runs_m4_L8/tokens/tokens_eval.npy",
+  "payload_bytes": 8193024000,
+  "payload_bytes_per_token": 8192.0,
+  "disk_bytes_per_token": 8192.002047744032,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "n_tokens": 131072,
+      "payload_bytes": 1073741824,
+      "disk_bytes": 1073742080
+    },
+    {
+      "file": "shard_00001.npz",
+      "n_tokens": 131072,
+      "payload_bytes": 1073741824,
+      "disk_bytes": 1073742080
+    },
+    {
+      "file": "shard_00002.npz",
+      "n_tokens": 131072,
+      "payload_bytes": 1073741824,
+      "disk_bytes": 1073742080
+    },
+    {
+      "file": "shard_00003.npz",
+      "n_tokens": 131072,
+      "payload_bytes": 1073741824,
+      "disk_bytes": 1073742080
+    },
+    {
+      "file": "shard_00004.npz",
+      "n_tokens": 131072,
+      "payload_bytes": 1073741824,
+      "disk_bytes": 1073742080
+    },
+    {
+      "file": "shard_00005.npz",
+      "n_tokens": 131072,
+      "payload_bytes": 1073741824,
+      "disk_bytes": 1073742080
+    },
+    {
+      "file": "shard_00006.npz",
+      "n_tokens": 131072,
+      "payload_bytes": 1073741824,
+      "disk_bytes": 1073742080
+    },
+    {
+      "file": "shard_00007.npz",
+      "n_tokens": 82621,
+      "payload_bytes": 676831232,
+      "disk_bytes": 676831488
+    }
+  ]
+}

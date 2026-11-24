@@ -1,0 +1,43 @@
+{
+  "mode": "stability",
+  "ref": "fp32_b3x_s0",
+  "seed_pairs": [
+    "fp32_b3x_s1",
+    "fp32_b3x_s2"
+  ],
+  "threshold": 0.9,
+  "n_alive": 4738,
+  "stable_frac_of_alive": 0.24905023216547068,
+  "rows": [
+    {
+      "cand": "fp16_b3x_s0",
+      "survived_all": 0.4917686787674124,
+      "survived_stable": 0.9177966101694915,
+      "survived_unstable": 0.350477796514896
+    },
+    {
+      "cand": "fp32_b3x_s1",
+      "survived_all": 0.3343182777543267,
+      "survived_stable": 1.0,
+      "survived_unstable": 0.1135469364811692
+    },
+    {
+      "cand": "fp32_b3x_s2",
+      "survived_all": 0.3330519206416209,
+      "survived_stable": 1.0,
+      "survived_unstable": 0.11186059584035975
+    },
+    {
+      "cand": "rot-int4_b3x_s0",
+      "survived_all": 0.3946813001266357,
+      "survived_stable": 0.8728813559322034,
+      "survived_unstable": 0.23608768971332209
+    },
+    {
+      "cand": "rot-int8_b3x_s0",
+      "survived_all": 0.45272266779231746,
+      "survived_stable": 0.9059322033898305,
+      "survived_unstable": 0.3024170882518269
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+ "fp16": {
+  "raw_B_per_tok": 1536.0,
+  "zstd_B_per_tok": 1419.03511428833,
+  "ratio": 1.082425645802521,
+  "compress_MB_per_s": 438.9355610492726,
+  "decompress_MB_per_s": 314.8390192681972
+ },
+ "int8": {
+  "raw_B_per_tok": 772.0,
+  "zstd_B_per_tok": 510.89139556884766,
+  "ratio": 1.5110843648882033,
+  "compress_MB_per_s": 152.7765479996927,
+  "decompress_MB_per_s": 769.2340860995884
+ },
+ "rot-int8": {
+  "raw_B_per_tok": 772.0,
+  "zstd_B_per_tok": 709.0826301574707,
+  "ratio": 1.0887306601045308,
+  "compress_MB_per_s": 457.8271970273195,
+  "decompress_MB_per_s": 665.9904870282799
+ },
+ "int6": {
+  "raw_B_per_tok": 580.0,
+  "zstd_B_per_tok": 431.9445037841797,
+  "ratio": 1.3427650888452929,
+  "compress_MB_per_s": 73.88919915606226,
+  "decompress_MB_per_s": 410.2045234519642
+ },
+ "rot-int6": {
+  "raw_B_per_tok": 580.0,
+  "zstd_B_per_tok": 556.9764862060547,
+  "ratio": 1.0413365992355874,
+  "compress_MB_per_s": 287.7177239019536,
+  "decompress_MB_per_s": 664.7386894366605
+ },
+ "int4": {
+  "raw_B_per_tok": 388.0,
+  "zstd_B_per_tok": 146.4327621459961,
+  "ratio": 2.649680264947519,
+  "compress_MB_per_s": 93.09042984050787,
+  "decompress_MB_per_s": 246.18099191060256
+ },
+ "rot-int4": {
+  "raw_B_per_tok": 388.0,
+  "zstd_B_per_tok": 307.54273986816406,
+  "ratio": 1.2616132644403375,
+  "compress_MB_per_s": 401.45791381969417,
+  "decompress_MB_per_s": 718.4157991629919
+ },
+ "int4-o16": {
+  "raw_B_per_tok": 412.0,
+  "zstd_B_per_tok": 309.09564208984375,
+  "ratio": 1.3329207659299362,
+  "compress_MB_per_s": 164.95254964287133,
+  "decompress_MB_per_s": 560.4203775360762
+ },
+ "std-int4": {
+  "raw_B_per_tok": 388.0,
+  "zstd_B_per_tok": 303.7580909729004,
+  "ratio": 1.277332230912049,
+  "compress_MB_per_s": 705.5391194216633,
+  "decompress_MB_per_s": 786.9091121288
+ }
+}

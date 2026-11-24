@@ -1,0 +1,62 @@
+{
+  "sst2/fp16": {
+    "n_splits": 400,
+    "l2_effect": 0.002845221199095249,
+    "fails_x1": 0,
+    "fails_x2": 0
+  },
+  "sst2/int4": {
+    "n_splits": 400,
+    "l2_effect": 4.5998358726501465,
+    "fails_x1": 399,
+    "fails_x2": 400
+  },
+  "sst2/pca256": {
+    "n_splits": 400,
+    "l2_effect": 0.4786206781864166,
+    "fails_x1": 0,
+    "fails_x2": 3
+  },
+  "sst2/rot-int4": {
+    "n_splits": 400,
+    "l2_effect": 0.10936316102743149,
+    "fails_x1": 0,
+    "fails_x2": 0
+  },
+  "sst2/rot-int8": {
+    "n_splits": 400,
+    "l2_effect": 0.006320847198367119,
+    "fails_x1": 0,
+    "fails_x2": 0
+  },
+  "ag_news/fp16": {
+    "n_splits": 400,
+    "l2_effect": 0.001314728637225926,
+    "fails_x1": 0,
+    "fails_x2": 0
+  },
+  "ag_news/int4": {
+    "n_splits": 400,
+    "l2_effect": 10.035737991333008,
+    "fails_x1": 400,
+    "fails_x2": 400
+  },
+  "ag_news/pca256": {
+    "n_splits": 400,
+    "l2_effect": 0.20183156430721283,
+    "fails_x1": 0,
+    "fails_x2": 51
+  },
+  "ag_news/rot-int4": {
+    "n_splits": 400,
+    "l2_effect": 0.03863823041319847,
+    "fails_x1": 0,
+    "fails_x2": 0
+  },
+  "ag_news/rot-int8": {
+    "n_splits": 400,
+    "l2_effect": 0.004800932016223669,
+    "fails_x1": 0,
+    "fails_x2": 0
+  }
+}

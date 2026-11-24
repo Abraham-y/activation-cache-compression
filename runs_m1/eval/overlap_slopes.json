@@ -1,0 +1,52 @@
+{
+  "note": "Slopes of the isotropic-noise ladder against the quantizer family,\ncomputed over the SAME magnitude range.\n\nThe paper's resolution asymmetry compares a near-lossless rate to a\ncodec-range rate. Those come from different perturbation families, and\nrates from different families over disjoint ranges need not be\ncommensurable. These two rungs (1e-3, 1e-2) put isotropic noise inside\nthe range real codecs occupy so the comparison can be checked directly.",
+  "arms": {
+    "noise7": {
+      "rel_l2": 1.0131029171134287e-07,
+      "survived": 66.0082304526749
+    },
+    "noise6": {
+      "rel_l2": 1.0003145689552184e-06,
+      "survived": 63.51851851851852
+    },
+    "noise5": {
+      "rel_l2": 1.0000031579693314e-05,
+      "survived": 61.83127572016461
+    },
+    "noise4": {
+      "rel_l2": 9.999999747378752e-05,
+      "survived": 60.63786008230453
+    },
+    "noise3": {
+      "rel_l2": 0.0010000000474974513,
+      "survived": 58.971193415637856
+    },
+    "noise2": {
+      "rel_l2": 0.009999999776482582,
+      "survived": 51.1522633744856
+    },
+    "fp16": {
+      "rel_l2": 0.00020335870288405567,
+      "survived": 60.617283950617285
+    },
+    "rot-int8": {
+      "rel_l2": 0.0055059671236872675,
+      "survived": 53.827160493827165
+    },
+    "rot-int4": {
+      "rel_l2": 0.09990832915449142,
+      "survived": 37.65432098765432
+    },
+    "int4": {
+      "rel_l2": 0.4552576942367554,
+      "survived": 15.596707818930042
+    }
+  },
+  "slopes_pp_per_decade": {
+    "noise_1e-3_to_1e-2": 7.8189,
+    "noise_1e-4_to_1e-2": 4.7428,
+    "noise_1e-7_to_1e-4": 1.7935,
+    "quantizer_fp16_to_rot-int8": 4.7398,
+    "quantizer_fp16_to_rot-int4": 8.5322
+  }
+}

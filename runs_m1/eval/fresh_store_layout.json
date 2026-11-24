@@ -1,0 +1,9 @@
+{
+  "master_fresh_tokens": 98500184,
+  "std_int4_fresh_tokens": 98500184,
+  "mb_tokens": 78982487,
+  "mb_payload_bytes": 30645204956,
+  "fp16_payload_bytes": 30720133632,
+  "mb_bytes_over_fp16": 0.9975609261047631,
+  "mb_tokens_over_fp16": 3.9491071713838046
+}

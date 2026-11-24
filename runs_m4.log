@@ -1,0 +1,275 @@
+[2026-08-02 20:11:59] === M4 layer 8 into runs_m4_L8 ===
+[2026-08-02 20:11:59] stage: tokens
+tokens: 10000107 train / 1000125 eval (8193 docs)
+[2026-08-02 20:12:39] stage: cache layer 8
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9540.71it/s]
+[transformers] [1mGPTNeoXModel LOAD REPORT[0m from: EleutherAI/pythia-1.4b
+Key              | Status     |  | 
+-----------------+------------+--+-
+embed_out.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+cached master-train: 10000107 tokens, 8192 B/tok, 2400 tok/s, 4450.5s
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 291/291 [00:00<00:00, 8313.13it/s]
+[transformers] [1mGPTNeoXModel LOAD REPORT[0m from: EleutherAI/pythia-1.4b
+Key              | Status     |  | 
+-----------------+------------+--+-
+embed_out.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+cached master-eval: 1000125 tokens, 8192 B/tok, 2258 tok/s, 449.0s
+[2026-08-02 21:34:21] stage: transcode fp16
+fp16-train: 10000107 tokens, 4096.0 B/tok payload (4096.0 on disk), 84.7s
+fp16-eval: 1000125 tokens, 4096.0 B/tok payload (4096.0 on disk), 8.2s
+[2026-08-02 21:35:55] stage: transcode rot-int8
+rot-int8-train: 10000107 tokens, 2052.0 B/tok payload (2052.0 on disk), 274.1s
+rot-int8-eval: 1000125 tokens, 2052.0 B/tok payload (2052.0 on disk), 24.2s
+[2026-08-02 21:41:07] stage: transcode rot-int4
+rot-int4-train: 10000107 tokens, 1028.0 B/tok payload (1028.0 on disk), 244.0s
+rot-int4-eval: 1000125 tokens, 1028.0 B/tok payload (1028.0 on disk), 25.7s
+[2026-08-02 21:45:47] stage: transcode int4
+int4-train: 10000107 tokens, 1028.0 B/tok payload (1028.0 on disk), 147.9s
+int4-eval: 1000125 tokens, 1028.0 B/tok payload (1028.0 on disk), 13.9s
+[2026-08-02 21:48:30] stage: null + canary
+null check [fp16 vs fp16, raw channels, 500000 tokens]: mean r=1.0000000 min r=1.0000000 damaged=0.0% -> PASS
+misalignment canary: mean r=0.3210 -> PASS (metric is sensitive)
+[2026-08-02 21:48:46] stage: train fp32 seed=0
+trained fp32_s0: 6000 steps in 7030s (3496 tok/s, disk read 1786 MB/s)
+[2026-08-02 23:45:59] stage: train fp32 seed=1
+trained fp32_s1: 6000 steps in 6560s (3746 tok/s, disk read 1869 MB/s)
+[2026-08-03 01:35:21] stage: train fp32 seed=2
+trained fp32_s2: 6000 steps in 7563s (3250 tok/s, disk read 1555 MB/s)
+fp32_s0 healthy: l0=32.0 fvu=0.234
+[2026-08-03 03:41:27] disk: deleting runs_m4_L8/cache/master-train (fp32 refs trained)
+[2026-08-03 03:41:27] stage: train fp16
+trained fp16_s0: 6000 steps in 7723s (3182 tok/s, disk read 1301 MB/s)
+[2026-08-03 05:50:14] stage: train rot-int8
+trained rot-int8_s0: 6000 steps in 8271s (2971 tok/s, disk read 1878 MB/s)
+[2026-08-03 08:08:09] stage: train rot-int4
+trained rot-int4_s0: 6000 steps in 8063s (3048 tok/s, disk read 1745 MB/s)
+[2026-08-03 10:22:36] stage: train int4
+trained int4_s0: 6000 steps in 7301s (3366 tok/s, disk read 2072 MB/s)
+[2026-08-03 12:24:20] stage: eval-pair fp32_s0 vs fp32_s1
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+WARNING: eval_k censoring — ref 100.0%, cand 100.0% of tokens hit the cap; correlations are computed on truncated traces
+pair fp32_s0 vs fp32_s1: mean r=0.7081 survived=0.158 degraded=0.691 damaged=0.151  -> runs_m4_L8/eval/pair_fp32_s0__fp32_s1.json
+hungarian fp32_s0 vs fp32_s1: mean cos=0.5705 >0.7: 0.312  -> runs_m4_L8/eval/hungarian_fp32_s0__fp32_s1.json
+[2026-08-03 12:26:34] stage: eval-pair fp32_s0 vs fp32_s2
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+WARNING: eval_k censoring — ref 100.0%, cand 100.0% of tokens hit the cap; correlations are computed on truncated traces
+pair fp32_s0 vs fp32_s2: mean r=0.7080 survived=0.159 degraded=0.694 damaged=0.147  -> runs_m4_L8/eval/pair_fp32_s0__fp32_s2.json
+hungarian fp32_s0 vs fp32_s2: mean cos=0.5687 >0.7: 0.307  -> runs_m4_L8/eval/hungarian_fp32_s0__fp32_s2.json
+[2026-08-03 12:28:48] stage: eval-pair fp32_s1 vs fp32_s2
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+WARNING: eval_k censoring — ref 100.0%, cand 100.0% of tokens hit the cap; correlations are computed on truncated traces
+pair fp32_s1 vs fp32_s2: mean r=0.7081 survived=0.156 degraded=0.691 damaged=0.154  -> runs_m4_L8/eval/pair_fp32_s1__fp32_s2.json
+hungarian fp32_s1 vs fp32_s2: mean cos=0.5676 >0.7: 0.306  -> runs_m4_L8/eval/hungarian_fp32_s1__fp32_s2.json
+[2026-08-03 12:31:04] stage: eval-pair fp32_s0 vs fp16_s0
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+WARNING: eval_k censoring — ref 100.0%, cand 100.0% of tokens hit the cap; correlations are computed on truncated traces
+pair fp32_s0 vs fp16_s0: mean r=1.0000 survived=1.000 degraded=0.000 damaged=0.000  -> runs_m4_L8/eval/pair_fp32_s0__fp16_s0.json
+hungarian fp32_s0 vs fp16_s0: mean cos=1.0000 >0.7: 1.000  -> runs_m4_L8/eval/hungarian_fp32_s0__fp16_s0.json
+[2026-08-03 12:33:08] stage: eval-pair fp32_s0 vs rot-int8_s0
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+WARNING: eval_k censoring — ref 100.0%, cand 100.0% of tokens hit the cap; correlations are computed on truncated traces
+pair fp32_s0 vs rot-int8_s0: mean r=0.8209 survived=0.430 degraded=0.503 damaged=0.068  -> runs_m4_L8/eval/pair_fp32_s0__rot-int8_s0.json
+hungarian fp32_s0 vs rot-int8_s0: mean cos=0.7353 >0.7: 0.680  -> runs_m4_L8/eval/hungarian_fp32_s0__rot-int8_s0.json
+[2026-08-03 12:35:18] stage: eval-pair fp32_s0 vs rot-int4_s0
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+WARNING: eval_k censoring — ref 100.0%, cand 100.0% of tokens hit the cap; correlations are computed on truncated traces
+pair fp32_s0 vs rot-int4_s0: mean r=0.7572 survived=0.258 degraded=0.632 damaged=0.109  -> runs_m4_L8/eval/pair_fp32_s0__rot-int4_s0.json
+hungarian fp32_s0 vs rot-int4_s0: mean cos=0.6467 >0.7: 0.496  -> runs_m4_L8/eval/hungarian_fp32_s0__rot-int4_s0.json
+[2026-08-03 12:37:29] stage: eval-pair fp32_s0 vs int4_s0
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+WARNING: eval_k censoring — ref 100.0%, cand 100.0% of tokens hit the cap; correlations are computed on truncated traces
+pair fp32_s0 vs int4_s0: mean r=0.5092 survived=0.028 degraded=0.494 damaged=0.477  -> runs_m4_L8/eval/pair_fp32_s0__int4_s0.json
+hungarian fp32_s0 vs int4_s0: mean cos=0.3036 >0.7: 0.030  -> runs_m4_L8/eval/hungarian_fp32_s0__int4_s0.json
+[2026-08-03 12:39:46] stage: stability layer 8
+stable features (r>0.9 vs 2 seeds): 9.4% of alive
+cand                 all  stable  unstable
+fp16_s0            1.000   1.000     1.000
+fp32_s1            0.158   1.000     0.071
+fp32_s2            0.159   1.000     0.072
+int4_s0            0.028   0.137     0.017
+rot-int4_s0        0.258   0.816     0.201
+rot-int8_s0        0.430   0.880     0.383
+[2026-08-03 12:39:47] === M4 layer 8 complete ===
+[2026-08-03 12:39:47] === M4 layer 16 into runs_m4_L16 ===
+[2026-08-03 12:39:47] stage: tokens (copy from runs_m4_L8 — deterministic build)
+[2026-08-03 12:39:47] stage: cache layer 16
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 291/291 [00:00<00:00, 9613.22it/s]
+[transformers] [1mGPTNeoXModel LOAD REPORT[0m from: EleutherAI/pythia-1.4b
+Key              | Status     |  | 
+-----------------+------------+--+-
+embed_out.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+/opt/miniconda3/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2026-08-04 14:11:26] === M4 layer 8 into runs_m4_L8 ===
+[2026-08-04 14:11:26] skip: tokens
+[2026-08-04 14:11:26] skip: cache
+[2026-08-04 14:11:26] skip: transcode fp16
+[2026-08-04 14:11:26] skip: transcode rot-int8
+[2026-08-04 14:11:26] skip: transcode rot-int4
+[2026-08-04 14:11:26] skip: transcode int4
+[2026-08-04 14:11:26] stage: null + canary
+null check [fp16 vs fp16, frozen SAE fp32_s0, 500000 tokens]: mean r=1.0000000 min r=1.0000000 damaged=0.0% -> PASS
+misalignment canary: mean r=0.2603 -> PASS (metric is sensitive)
+[2026-08-04 14:16:09] skip: train fp32_s0
+[2026-08-04 14:16:09] skip: train fp32_s1
+[2026-08-04 14:16:09] skip: train fp32_s2
+fp32_s0 healthy: l0=32.0 fvu=0.234
+[2026-08-04 14:16:10] skip: train fp16_s0
+[2026-08-04 14:16:10] skip: train rot-int8_s0
+[2026-08-04 14:16:10] skip: train rot-int4_s0
+[2026-08-04 14:16:10] skip: train int4_s0
+[2026-08-04 14:16:10] skip: pair fp32_s0 fp32_s1
+[2026-08-04 14:16:10] skip: pair fp32_s0 fp32_s2
+[2026-08-04 14:16:10] skip: pair fp32_s1 fp32_s2
+[2026-08-04 14:16:10] skip: pair fp32_s0 fp16_s0
+[2026-08-04 14:16:10] skip: pair fp32_s0 rot-int8_s0
+[2026-08-04 14:16:10] skip: pair fp32_s0 rot-int4_s0
+[2026-08-04 14:16:10] skip: pair fp32_s0 int4_s0
+[2026-08-04 14:16:10] stage: stability layer 8
+stable features (r>0.9 vs 2 seeds): 9.4% of alive
+cand                 all  stable  unstable
+fp16_s0            1.000   1.000     1.000
+fp32_s1            0.158   1.000     0.071
+fp32_s2            0.159   1.000     0.072
+int4_s0            0.028   0.137     0.017
+rot-int4_s0        0.258   0.816     0.201
+rot-int8_s0        0.430   0.880     0.383
+[2026-08-04 14:16:12] === M4 layer 8 complete ===
+[2026-08-04 14:16:12] === M4 layer 16 into runs_m4_L16 ===
+[2026-08-04 14:16:12] skip: tokens
+[2026-08-04 14:16:12] stage: cache layer 16
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 291/291 [00:00<00:00, 6291.88it/s]
+[transformers] [1mGPTNeoXModel LOAD REPORT[0m from: EleutherAI/pythia-1.4b
+Key              | Status     |  | 
+-----------------+------------+--+-
+embed_out.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+cached master-train: 10000107 tokens, 8192 B/tok, 2146 tok/s, 4668.8s
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 291/291 [00:00<00:00, 6015.13it/s]
+[transformers] [1mGPTNeoXModel LOAD REPORT[0m from: EleutherAI/pythia-1.4b
+Key              | Status     |  | 
+-----------------+------------+--+-
+embed_out.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+cached master-eval: 1000125 tokens, 8192 B/tok, 2204 tok/s, 460.3s
+[2026-08-04 15:41:45] stage: transcode fp16
+fp16-train: 10000107 tokens, 4096.0 B/tok payload (4096.0 on disk), 92.8s
+fp16-eval: 1000125 tokens, 4096.0 B/tok payload (4096.0 on disk), 9.8s
+[2026-08-04 15:43:30] stage: transcode rot-int8
+rot-int8-train: 10000107 tokens, 2052.0 B/tok payload (2052.0 on disk), 391.0s
+rot-int8-eval: 1000125 tokens, 2052.0 B/tok payload (2052.0 on disk), 35.1s
+[2026-08-04 15:50:58] stage: transcode rot-int4
+rot-int4-train: 10000107 tokens, 1028.0 B/tok payload (1028.0 on disk), 358.9s
+rot-int4-eval: 1000125 tokens, 1028.0 B/tok payload (1028.0 on disk), 35.7s
+[2026-08-04 15:57:48] stage: transcode int4
+int4-train: 10000107 tokens, 1028.0 B/tok payload (1028.0 on disk), 176.4s
+int4-eval: 1000125 tokens, 1028.0 B/tok payload (1028.0 on disk), 19.6s
+[2026-08-04 16:01:07] stage: null + canary
+null check [fp16 vs fp16, raw channels, 500000 tokens]: mean r=1.0000000 min r=1.0000000 damaged=0.0% -> PASS
+misalignment canary: mean r=0.3833 -> PASS (metric is sensitive)
+[2026-08-04 16:01:31] stage: train fp32 seed=0
+trained fp32_s0: 6000 steps in 8319s (2954 tok/s, disk read 929 MB/s)
+[2026-08-04 18:20:14] stage: train fp32 seed=1
+trained fp32_s1: 6000 steps in 7627s (3222 tok/s, disk read 2330 MB/s)
+[2026-08-04 20:27:25] stage: train fp32 seed=2
+trained fp32_s2: 6000 steps in 7702s (3191 tok/s, disk read 2054 MB/s)
+fp32_s0 healthy: l0=32.0 fvu=0.228
+[2026-08-04 22:35:51] disk: deleting runs_m4_L16/cache/master-train (fp32 refs trained)
+[2026-08-04 22:35:52] stage: train fp16
+trained fp16_s0: 6000 steps in 8308s (2958 tok/s, disk read 2014 MB/s)
+[2026-08-05 00:54:23] stage: train rot-int8
+trained rot-int8_s0: 6000 steps in 7918s (3104 tok/s, disk read 2169 MB/s)
+[2026-08-05 03:06:25] stage: train rot-int4
+trained rot-int4_s0: 6000 steps in 7635s (3219 tok/s, disk read 2381 MB/s)
+[2026-08-05 05:13:44] stage: train int4
+trained int4_s0: 6000 steps in 8127s (3024 tok/s, disk read 2661 MB/s)
+[2026-08-05 07:29:13] stage: eval-pair fp32_s0 vs fp32_s1
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+pair fp32_s0 vs fp32_s1: mean r=0.7120 survived=0.185 degraded=0.662 damaged=0.154  -> runs_m4_L16/eval/pair_fp32_s0__fp32_s1.json
+hungarian fp32_s0 vs fp32_s1: mean cos=0.5776 >0.7: 0.354  -> runs_m4_L16/eval/hungarian_fp32_s0__fp32_s1.json
+[2026-08-05 07:31:20] stage: eval-pair fp32_s0 vs fp32_s2
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+pair fp32_s0 vs fp32_s2: mean r=0.7136 survived=0.185 degraded=0.658 damaged=0.157  -> runs_m4_L16/eval/pair_fp32_s0__fp32_s2.json
+hungarian fp32_s0 vs fp32_s2: mean cos=0.5782 >0.7: 0.353  -> runs_m4_L16/eval/hungarian_fp32_s0__fp32_s2.json
+[2026-08-05 07:33:26] stage: eval-pair fp32_s1 vs fp32_s2
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+pair fp32_s1 vs fp32_s2: mean r=0.7093 survived=0.182 degraded=0.650 damaged=0.167  -> runs_m4_L16/eval/pair_fp32_s1__fp32_s2.json
+hungarian fp32_s1 vs fp32_s2: mean cos=0.5774 >0.7: 0.355  -> runs_m4_L16/eval/hungarian_fp32_s1__fp32_s2.json
+[2026-08-05 07:35:31] stage: eval-pair fp32_s0 vs fp16_s0
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+pair fp32_s0 vs fp16_s0: mean r=1.0000 survived=1.000 degraded=0.000 damaged=0.000  -> runs_m4_L16/eval/pair_fp32_s0__fp16_s0.json
+hungarian fp32_s0 vs fp16_s0: mean cos=1.0000 >0.7: 1.000  -> runs_m4_L16/eval/hungarian_fp32_s0__fp16_s0.json
+[2026-08-05 07:37:28] stage: eval-pair fp32_s0 vs rot-int8_s0
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+pair fp32_s0 vs rot-int8_s0: mean r=0.7990 survived=0.384 degraded=0.526 damaged=0.091  -> runs_m4_L16/eval/pair_fp32_s0__rot-int8_s0.json
+hungarian fp32_s0 vs rot-int8_s0: mean cos=0.7034 >0.7: 0.626  -> runs_m4_L16/eval/hungarian_fp32_s0__rot-int8_s0.json
+[2026-08-05 07:39:34] stage: eval-pair fp32_s0 vs rot-int4_s0
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+pair fp32_s0 vs rot-int4_s0: mean r=0.7480 survived=0.261 degraded=0.612 damaged=0.128  -> runs_m4_L16/eval/pair_fp32_s0__rot-int4_s0.json
+hungarian fp32_s0 vs rot-int4_s0: mean cos=0.6419 >0.7: 0.495  -> runs_m4_L16/eval/hungarian_fp32_s0__rot-int4_s0.json
+[2026-08-05 07:41:40] stage: eval-pair fp32_s0 vs int4_s0
+~/Downloads/activation_cache_compression/src/acc/cli.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at ~/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  fvu_num[name] += float((recon - x).pow(2).sum())
+pair fp32_s0 vs int4_s0: mean r=0.3428 survived=0.008 degraded=0.243 damaged=0.749  -> runs_m4_L16/eval/pair_fp32_s0__int4_s0.json
+hungarian fp32_s0 vs int4_s0: mean cos=0.1759 >0.7: 0.006  -> runs_m4_L16/eval/hungarian_fp32_s0__int4_s0.json
+[2026-08-05 07:43:53] stage: stability layer 16
+stable features (r>0.9 vs 2 seeds): 11.6% of alive
+cand                 all  stable  unstable
+fp16_s0            1.000   1.000     1.000
+fp32_s1            0.185   1.000     0.077
+fp32_s2            0.185   1.000     0.077
+int4_s0            0.008   0.051     0.003
+rot-int4_s0        0.261   0.830     0.186
+rot-int8_s0        0.384   0.893     0.317
+[2026-08-05 07:43:54] === M4 layer 16 complete ===
+[2026-08-05 07:43:54] === M4 COMPLETE ===

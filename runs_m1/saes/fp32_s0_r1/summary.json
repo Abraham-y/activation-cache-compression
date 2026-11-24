@@ -1,0 +1,25 @@
+{
+  "codec": "fp32",
+  "seed": 0,
+  "cfg": {
+    "d_in": 768,
+    "d_sae": 12288,
+    "k": 32,
+    "aux_k": 512,
+    "aux_coef": 0.03125,
+    "dead_tokens": 2000000,
+    "lr": 0.0003,
+    "batch_size": 4096,
+    "steps": 8000,
+    "log_every": 100
+  },
+  "final_dead_frac": 0.0,
+  "train_seconds": 3224.8364648330025,
+  "loader": {
+    "tokens_read": 32768000,
+    "disk_bytes_read": 103316231424,
+    "read_seconds": 206.2369002478663,
+    "read_disk_MB_per_s": 500.9590005466003,
+    "read_tokens_per_s": 158885.2429444862
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "codec": "rot-int4",
+  "seed": 0,
+  "cfg": {
+    "d_in": 768,
+    "d_sae": 12288,
+    "k": 32,
+    "aux_k": 512,
+    "aux_coef": 0.03125,
+    "dead_tokens": 2000000,
+    "lr": 0.0003,
+    "batch_size": 4096,
+    "steps": 8000,
+    "log_every": 100,
+    "arch": "jumprelu",
+    "l1_coef": 8.676435959031217,
+    "eval_k": 192,
+    "jr_bandwidth": 0.05,
+    "jr_theta_lr_mult": 30.0
+  },
+  "final_dead_frac": 0.3470865885416667,
+  "train_seconds": 3329.1505339170108,
+  "loader": {
+    "tokens_read": 32768000,
+    "disk_bytes_read": 13049115342,
+    "read_seconds": 322.84680912434123,
+    "disk_seconds": 5.418219962972216,
+    "decode_seconds": 208.19912504358217,
+    "read_disk_MB_per_s": 2408.3768158503817,
+    "decode_MB_per_s": 62.67612959117114,
+    "pipeline_MB_per_s": 40.41890758466274,
+    "read_tokens_per_s": 101497.05393984467
+  }
+}

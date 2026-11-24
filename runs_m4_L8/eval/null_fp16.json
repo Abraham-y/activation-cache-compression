@@ -1,0 +1,26 @@
+{
+  "mode": "null",
+  "codec": "fp16",
+  "basis": "frozen SAE fp32_s0",
+  "n_alive": 6573,
+  "mean_corr": 1.0,
+  "median_corr": 1.0,
+  "survived": 1.0,
+  "degraded": 0.0,
+  "damaged": 0.0,
+  "nan_frac": 0.0,
+  "corr_deciles": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "pass": true
+}

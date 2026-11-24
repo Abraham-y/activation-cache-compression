@@ -1,0 +1,24 @@
+{
+  "codec": "pca256",
+  "layer": 6,
+  "n": 67349,
+  "n_effective": 67349,
+  "classes_contrasted": [
+    0,
+    1
+  ],
+  "note": "Difference-in-means steering vector. The floor is two disjoint halves of the SAME fp32 data \u2014 the deterministic estimator's own nuisance variation, standing in for the seed floor used with SAEs. Only classes 0 and 1 are contrasted, so n_effective is what the direction and its floor are estimated from.",
+  "geometric": {
+    "cos_fp32_vs_codec": 0.999147355556488,
+    "cos_floor_half_vs_half": 0.985107421875
+  },
+  "causal": {
+    "strength": 5.0,
+    "n_prompts": 8,
+    "cos_effect_fp32_vs_codec": 0.9997764825820923,
+    "cos_effect_floor_half_vs_half": 0.9876917004585266,
+    "l2_effect_fp32_vs_codec": 0.4786206781864166,
+    "l2_effect_floor_half_vs_half": 3.258535861968994,
+    "ratio_to_floor_l2": 0.1468821269615264
+  }
+}

@@ -1,0 +1,28 @@
+[project]
+name = "acc"
+version = "0.1.0"
+description = "Activation cache compression for interpretability training"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.3",
+    "transformers>=4.40",
+    "datasets>=2.19",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "tqdm>=4.66",
+    "zstandard>=0.22",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

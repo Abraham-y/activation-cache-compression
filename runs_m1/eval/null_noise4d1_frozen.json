@@ -1,0 +1,28 @@
+{
+  "mode": "null",
+  "codec": "noise4d1",
+  "basis": "frozen SAE fp32_s0",
+  "n_alive": 4860,
+  "mean_corr": 1.0,
+  "median_corr": 1.0,
+  "survived": 1.0,
+  "degraded": 0.0,
+  "damaged": 0.0,
+  "nan_frac": 0.0,
+  "corr_deciles": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "pass": true,
+  "canary_mean_corr": 0.15647110752713586,
+  "canary_pass": true
+}

@@ -1,0 +1,38 @@
+{
+  "fp32_s1": {
+    "survivors": 1127,
+    "distinct": 1082,
+    "injective_frac": 0.9600709849157054,
+    "max_multiplicity": 3
+  },
+  "fp16": {
+    "survivors": 2946,
+    "distinct": 2944,
+    "injective_frac": 0.9993211133740665,
+    "max_multiplicity": 2
+  },
+  "rot-int8": {
+    "survivors": 2616,
+    "distinct": 2612,
+    "injective_frac": 0.9984709480122325,
+    "max_multiplicity": 2
+  },
+  "rot-int4": {
+    "survivors": 1830,
+    "distinct": 1808,
+    "injective_frac": 0.9879781420765027,
+    "max_multiplicity": 3
+  },
+  "int4": {
+    "survivors": 758,
+    "distinct": 689,
+    "injective_frac": 0.9089709762532981,
+    "max_multiplicity": 3
+  },
+  "pca256": {
+    "survivors": 381,
+    "distinct": 332,
+    "injective_frac": 0.8713910761154856,
+    "max_multiplicity": 3
+  }
+}

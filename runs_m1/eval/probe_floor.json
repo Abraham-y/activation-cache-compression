@@ -1,0 +1,28 @@
+{
+  "sst2": {
+    "n_full": 67349,
+    "n_half": 33674,
+    "acc_half_1": 0.8073394495412844,
+    "acc_half_2": 0.7970183486238532,
+    "floor_acc_delta": 0.008191349934469223,
+    "floor_direction_cos": 0.8036363550594875,
+    "n_splits": 7,
+    "floor_acc_delta_min": 0.002293577981651418,
+    "floor_acc_delta_max": 0.012614678899082632,
+    "floor_direction_cos_min": 0.7882927060127258,
+    "floor_direction_cos_max": 0.8231045603752136
+  },
+  "ag_news": {
+    "n_full": 120000,
+    "n_half": 60000,
+    "acc_half_1": 0.8706578947368421,
+    "acc_half_2": 0.8721052631578947,
+    "floor_acc_delta": 0.0018984962406015024,
+    "floor_direction_cos": 0.7695931111063276,
+    "n_splits": 7,
+    "floor_acc_delta_min": 0.0006578947368421906,
+    "floor_acc_delta_max": 0.004605263157894779,
+    "floor_direction_cos_min": 0.7594107985496521,
+    "floor_direction_cos_max": 0.781906008720398
+  }
+}

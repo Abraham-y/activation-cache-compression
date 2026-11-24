@@ -1,0 +1,16 @@
+{
+  "name": "fwdbf16",
+  "forward_dtype": "bf16",
+  "storage": "fp32 (identical to master)",
+  "layer": 6,
+  "model": "gpt2",
+  "device": "mps",
+  "aligned_with_master": true,
+  "n_tokens_train": 20000087,
+  "n_shards_train": 77,
+  "cache_tokens_per_s": {
+    "train": 17205.316601409988,
+    "eval": 17845.498770336348
+  },
+  "master_cache_tokens_per_s": null
+}

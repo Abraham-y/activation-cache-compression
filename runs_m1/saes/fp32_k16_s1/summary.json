@@ -1,0 +1,34 @@
+{
+  "codec": "fp32",
+  "seed": 1,
+  "cfg": {
+    "d_in": 768,
+    "d_sae": 12288,
+    "k": 16,
+    "aux_k": 512,
+    "aux_coef": 0.03125,
+    "dead_tokens": 2000000,
+    "lr": 0.0003,
+    "batch_size": 4096,
+    "steps": 8000,
+    "log_every": 100,
+    "arch": "topk",
+    "l1_coef": 0.0,
+    "eval_k": 192,
+    "jr_bandwidth": 0.05,
+    "jr_theta_lr_mult": 30.0
+  },
+  "final_dead_frac": 0.0013020833333333333,
+  "train_seconds": 4362.591802417068,
+  "loader": {
+    "tokens_read": 32768000,
+    "disk_bytes_read": 112979910912,
+    "read_seconds": 908.7753420837689,
+    "disk_seconds": 215.72465387592092,
+    "decode_seconds": 103.03902078187093,
+    "read_disk_MB_per_s": 523.7227589989924,
+    "decode_MB_per_s": 1096.4769468371937,
+    "pipeline_MB_per_s": 124.32105678939709,
+    "read_tokens_per_s": 36057.31634934646
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "mode": "pair",
+  "ref": "fp32_s0",
+  "cand": "fp16_s0",
+  "n_eval_tokens": 500000,
+  "n_alive": 7088,
+  "mean_corr": 1.0,
+  "median_corr": 1.0,
+  "survived": 1.0,
+  "degraded": 0.0,
+  "damaged": 0.0,
+  "nan_frac": 0.0,
+  "corr_deciles": [
+    0.9999999999999998,
+    0.9999999999999999,
+    0.9999999999999999,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0000000000000002,
+    1.0000000000000002,
+    1.0000000000000002
+  ],
+  "decoder_cos_mean_alive": 1.0000000059032816,
+  "fvu_ref": 0.20846757434787475,
+  "fvu_cand": 0.20846757434787475,
+  "alive_frac_ref": 0.4326171875,
+  "censored_frac_ref": 0.0,
+  "censored_frac_cand": 0.0,
+  "cand_dead": false
+}

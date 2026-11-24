@@ -1,0 +1,147 @@
+{
+  "ref": "fp32_s0",
+  "cand": "rot-int4_s0",
+  "n_tokens": 150000,
+  "pairs": [
+    {
+      "band": "survived",
+      "ref_feat": 10360,
+      "cand_feat": 10360,
+      "corr": 0.9517699571639447,
+      "top_overlap": 0.8
+    },
+    {
+      "band": "survived",
+      "ref_feat": 929,
+      "cand_feat": 6405,
+      "corr": 0.9663566724044312,
+      "top_overlap": 0.9
+    },
+    {
+      "band": "survived",
+      "ref_feat": 215,
+      "cand_feat": 215,
+      "corr": 0.9784015000271912,
+      "top_overlap": 0.9
+    },
+    {
+      "band": "survived",
+      "ref_feat": 6257,
+      "cand_feat": 6257,
+      "corr": 0.9732109420805259,
+      "top_overlap": 0.5
+    },
+    {
+      "band": "survived",
+      "ref_feat": 3799,
+      "cand_feat": 10868,
+      "corr": 0.9373932747542316,
+      "top_overlap": 0.8
+    },
+    {
+      "band": "survived",
+      "ref_feat": 3347,
+      "cand_feat": 476,
+      "corr": 0.9618489762409553,
+      "top_overlap": 0.3
+    },
+    {
+      "band": "survived",
+      "ref_feat": 523,
+      "cand_feat": 523,
+      "corr": 0.9982131481330908,
+      "top_overlap": 0.3
+    },
+    {
+      "band": "survived",
+      "ref_feat": 7745,
+      "cand_feat": 7745,
+      "corr": 0.9393645732155051,
+      "top_overlap": 0.8
+    },
+    {
+      "band": "degraded",
+      "ref_feat": 3379,
+      "cand_feat": 3379,
+      "corr": 0.8397250969513496,
+      "top_overlap": 0.5
+    },
+    {
+      "band": "degraded",
+      "ref_feat": 6628,
+      "cand_feat": 6628,
+      "corr": 0.889602921178521,
+      "top_overlap": 0.8
+    },
+    {
+      "band": "degraded",
+      "ref_feat": 7708,
+      "cand_feat": 8598,
+      "corr": 0.6141423799180132,
+      "top_overlap": 0.5
+    },
+    {
+      "band": "degraded",
+      "ref_feat": 8808,
+      "cand_feat": 10947,
+      "corr": 0.5322694650813933,
+      "top_overlap": 0.7
+    },
+    {
+      "band": "degraded",
+      "ref_feat": 6832,
+      "cand_feat": 10861,
+      "corr": 0.773708752292814,
+      "top_overlap": 0.1
+    },
+    {
+      "band": "degraded",
+      "ref_feat": 11458,
+      "cand_feat": 11458,
+      "corr": 0.7115997283379238,
+      "top_overlap": 0.4
+    },
+    {
+      "band": "damaged",
+      "ref_feat": 9302,
+      "cand_feat": 913,
+      "corr": 0.47091498649246905,
+      "top_overlap": 0.3
+    },
+    {
+      "band": "damaged",
+      "ref_feat": 8926,
+      "cand_feat": 579,
+      "corr": 0.4349716293044095,
+      "top_overlap": 0.1
+    },
+    {
+      "band": "damaged",
+      "ref_feat": 637,
+      "cand_feat": 606,
+      "corr": 0.33323080173490666,
+      "top_overlap": 0.1
+    },
+    {
+      "band": "damaged",
+      "ref_feat": 2454,
+      "cand_feat": 2454,
+      "corr": 0.21222532528429763,
+      "top_overlap": 0.0
+    },
+    {
+      "band": "damaged",
+      "ref_feat": 10394,
+      "cand_feat": 457,
+      "corr": 0.26557512831266766,
+      "top_overlap": 0.3
+    },
+    {
+      "band": "damaged",
+      "ref_feat": 6946,
+      "cand_feat": 12152,
+      "corr": 0.46607328092065037,
+      "top_overlap": 0.4
+    }
+  ]
+}

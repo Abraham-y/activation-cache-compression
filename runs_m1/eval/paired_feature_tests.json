@@ -1,0 +1,208 @@
+{
+  "note": "Paired, within-run feature-level tests.\n\nEvery comparison in this paper is between two arms evaluated on the SAME\nalive feature set against the SAME fp32 reference. That is a matched-pairs\ndesign at n ~ 4,860, and collapsing it to two marginal percentages throws\nthe pairing away. McNemar recovers it, and a paired bootstrap puts an\ninterval on the ratios, which are otherwise quoted without one.\n\nFeatures are not independent, so the p-values are optimistic in magnitude;\nthey are reported as effect-size evidence within a run, not as a claim\nabout the feature population. The value is that a single-seed cell stops\nresting on an eyeballed tie band.",
+  "threshold": 0.9,
+  "forward_precision": {
+    "seed0": {
+      "bf16_only": 403,
+      "rot_int8_only": 532,
+      "delta_pp": -2.654320987654324,
+      "mcnemar_p": 2.7619619876034282e-05
+    },
+    "seed1": {
+      "bf16_only": 379,
+      "rot_int8_only": 468,
+      "delta_pp": -1.8192968111201913,
+      "mcnemar_p": 0.0024769140465601466
+    },
+    "seed2": {
+      "bf16_only": 343,
+      "rot_int8_only": 487,
+      "delta_pp": -2.952029520295202,
+      "mcnemar_p": 6.507591796704143e-07
+    }
+  },
+  "below_floor": {
+    "gpt2_l6/rot-int4": {
+      "ratio_to_floor": 1.6237799467613132,
+      "ci95": [
+        1.5528922599717174,
+        1.7012873671238156
+      ],
+      "codec_only": 915,
+      "floor_only": 212,
+      "mcnemar_p": 1.8701894704978377e-104
+    },
+    "gpt2_l6/int4": {
+      "ratio_to_floor": 0.6725820763087844,
+      "ci95": [
+        0.632670259114882,
+        0.7142857142857142
+      ],
+      "codec_only": 218,
+      "floor_only": 587,
+      "mcnemar_p": 7.3081432992264084e-40
+    },
+    "pythia_l8/rot-int4": {
+      "ratio_to_floor": 1.6358381502890176,
+      "ci95": [
+        1.5520067387164873,
+        1.7252093886074822
+      ],
+      "codec_only": 963,
+      "floor_only": 303,
+      "mcnemar_p": 2.2482412593692624e-80
+    },
+    "pythia_l8/int4": {
+      "ratio_to_floor": 0.17919075144508673,
+      "ci95": [
+        0.1544943820224719,
+        0.2047244094488189
+      ],
+      "codec_only": 66,
+      "floor_only": 918,
+      "mcnemar_p": 8.978375620425516e-193
+    },
+    "pythia_l16/rot-int4": {
+      "ratio_to_floor": 1.412079510703364,
+      "ci95": [
+        1.3511338697878565,
+        1.477236248670588
+      ],
+      "codec_only": 892,
+      "floor_only": 353,
+      "mcnemar_p": 3.4013435336123025e-54
+    },
+    "pythia_l16/int4": {
+      "ratio_to_floor": 0.04510703363914373,
+      "ci95": [
+        0.03429005301198092,
+        0.05693678869849259
+      ],
+      "codec_only": 11,
+      "floor_only": 1260,
+      "mcnemar_p": 0.0
+    }
+  },
+  "ratio_cis": {
+    "gpt2_l6/fp16": {
+      "ratio": 2.614019520851819,
+      "ci95": [
+        2.494889049427005,
+        2.7449664429530203
+      ],
+      "excludes_1": true
+    },
+    "gpt2_l6/rot-int8": {
+      "ratio": 2.321206743566992,
+      "ci95": [
+        2.218855218855219,
+        2.4344637946837766
+      ],
+      "excludes_1": true
+    },
+    "gpt2_l6/int8": {
+      "ratio": 2.0097604259094943,
+      "ci95": [
+        1.921500481390093,
+        2.1064225323156784
+      ],
+      "excludes_1": true
+    },
+    "gpt2_l6/rot-int4": {
+      "ratio": 1.6237799467613132,
+      "ci95": [
+        1.5528922599717174,
+        1.7012873671238156
+      ],
+      "excludes_1": true
+    },
+    "gpt2_l6/int4": {
+      "ratio": 0.6725820763087844,
+      "ci95": [
+        0.632670259114882,
+        0.7142857142857142
+      ],
+      "excludes_1": true
+    },
+    "pythia_l8/fp16": {
+      "ratio": 6.332369942196532,
+      "ci95": [
+        5.997262773722628,
+        6.707142857142856
+      ],
+      "excludes_1": true
+    },
+    "pythia_l8/rot-int8": {
+      "ratio": 2.7215799614643545,
+      "ci95": [
+        2.5835554646319996,
+        2.871795523906409
+      ],
+      "excludes_1": true
+    },
+    "pythia_l8/int8": {
+      "ratio": 2.084778420038536,
+      "ci95": [
+        1.9796484736355227,
+        2.1995927196115694
+      ],
+      "excludes_1": true
+    },
+    "pythia_l8/rot-int4": {
+      "ratio": 1.6358381502890176,
+      "ci95": [
+        1.5520067387164873,
+        1.7252093886074822
+      ],
+      "excludes_1": true
+    },
+    "pythia_l8/int4": {
+      "ratio": 0.17919075144508673,
+      "ci95": [
+        0.1544943820224719,
+        0.2047244094488189
+      ],
+      "excludes_1": true
+    },
+    "pythia_l16/fp16": {
+      "ratio": 5.418960244648318,
+      "ci95": [
+        5.166180758017492,
+        5.697749196141479
+      ],
+      "excludes_1": true
+    },
+    "pythia_l16/rot-int8": {
+      "ratio": 2.0802752293577984,
+      "ci95": [
+        1.9891928887840777,
+        2.177760375880971
+      ],
+      "excludes_1": true
+    },
+    "pythia_l16/int8": {
+      "ratio": 1.5030581039755353,
+      "ci95": [
+        1.4375450388026607,
+        1.5729166666666665
+      ],
+      "excludes_1": true
+    },
+    "pythia_l16/rot-int4": {
+      "ratio": 1.412079510703364,
+      "ci95": [
+        1.3511338697878565,
+        1.477236248670588
+      ],
+      "excludes_1": true
+    },
+    "pythia_l16/int4": {
+      "ratio": 0.04510703363914373,
+      "ci95": [
+        0.03429005301198092,
+        0.05693678869849259
+      ],
+      "excludes_1": true
+    }
+  }
+}

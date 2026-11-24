@@ -1,0 +1,7 @@
+{
+  "forward_tok_s": 7218.8,
+  "train_consumption_tok_s": 10043.9,
+  "streaming_fraction_of_cached_speed": 0.7187308549784549,
+  "sweep_size": 9,
+  "note": "GPT-2 small, mps. Forward measured by this script (cache_activations loop minus the writer); train consumption is the mean whole-run rate recorded in the fp32 seed summaries. Streaming regenerates activations for every SAE; caching amortizes one forward across all runs."
+}

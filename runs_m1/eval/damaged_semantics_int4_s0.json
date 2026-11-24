@@ -1,0 +1,35 @@
+{
+ "ref": "fp32_s0",
+ "cand": "int4_s0",
+ "n_eval_tokens": 200000,
+ "top_k": 50,
+ "bands": {
+  "survived": {
+   "n": 758,
+   "position_jaccard_mean": 0.4857201812334155,
+   "tokentype_jaccard_mean": 0.7083436710732756,
+   "null_position_jaccard_mean": 0.00022326302357931848,
+   "null_tokentype_jaccard_mean": 0.0029823268158750437,
+   "tokentype_jaccard_nostop_mean": 0.5633817574249943,
+   "null_tokentype_jaccard_nostop_mean": 0.0015738306013165534
+  },
+  "degraded": {
+   "n": 2884,
+   "position_jaccard_mean": 0.3570490885255736,
+   "tokentype_jaccard_mean": 0.45689017722968917,
+   "null_position_jaccard_mean": 0.000455061816057035,
+   "null_tokentype_jaccard_mean": 0.006994570798427104,
+   "tokentype_jaccard_nostop_mean": 0.3323637982466894,
+   "null_tokentype_jaccard_nostop_mean": 0.002018981169445732
+  },
+  "damaged": {
+   "n": 1218,
+   "position_jaccard_mean": 0.11257479194615119,
+   "tokentype_jaccard_mean": 0.1671696495334764,
+   "null_position_jaccard_mean": 0.00010019956405905028,
+   "null_tokentype_jaccard_mean": 0.008422333197129518,
+   "tokentype_jaccard_nostop_mean": 0.11197861370635569,
+   "null_tokentype_jaccard_nostop_mean": 0.0019490370826345839
+  }
+ }
+}

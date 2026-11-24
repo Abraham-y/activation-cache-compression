@@ -1,0 +1,15 @@
+{
+  "dataset": "monology/pile-uncopyrighted",
+  "tokenizer": "EleutherAI/pythia-1.4b",
+  "eot_id": 0,
+  "pretokenized": false,
+  "ctx": 128,
+  "row_len": 127,
+  "prepend_eot": true,
+  "seed": 0,
+  "n_docs_consumed": 8193,
+  "n_rows_train": 78741,
+  "n_rows_eval": 7875,
+  "n_train_tokens": 10000107,
+  "n_eval_tokens": 1000125
+}

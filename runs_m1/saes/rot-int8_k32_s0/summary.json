@@ -1,0 +1,25 @@
+{
+  "codec": "rot-int8",
+  "seed": 0,
+  "cfg": {
+    "d_in": 768,
+    "d_sae": 12288,
+    "k": 32,
+    "aux_k": 512,
+    "aux_coef": 0.03125,
+    "dead_tokens": 2000000,
+    "lr": 0.0003,
+    "batch_size": 4096,
+    "steps": 8000,
+    "log_every": 100
+  },
+  "final_dead_frac": 8.138020833333333e-05,
+  "train_seconds": 3258.0343916249694,
+  "loader": {
+    "tokens_read": 32768000,
+    "disk_bytes_read": 25963640142,
+    "read_seconds": 244.1315167559078,
+    "read_disk_MB_per_s": 106.35103769891151,
+    "read_tokens_per_s": 134222.73549696052
+  }
+}
